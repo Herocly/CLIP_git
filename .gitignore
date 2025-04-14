@@ -10,3 +10,6 @@ thumbs.db
 .idea
 *.pt
 *.pth
+*.jpg
+*.jpeg
+*.png
