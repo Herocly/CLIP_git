@@ -28,7 +28,7 @@ def strawberry_read_with_post(path):
 
 def select_image():
     temp_path = filedialog.askopenfilename(
-        title = "选择图片文件喵",
+        title = "选择图片文件",
         filetypes=[("图片文件","*.jpg *.jpeg *.png *.bmp"),("所有文件","*.*")]
     )
     return temp_path
