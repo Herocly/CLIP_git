@@ -115,7 +115,16 @@ def class_demo_post(path , text_language):
                     "result": '{}    {}    others:{}'.format(text_language[id],probs[i,id],[v for v in zip(text_language,probs[i])])
                 }
             
-def class_demo_strawberry_post(path , text_language):
+def class_demo_strawberry_post(path):
+    text_language=["Nutrient-deficient strawberry",
+                    "Strawberry with Aphid disease",
+                    "strawberry with Calcium-deficient disease",
+                    "strawberry with leaf spot disease",
+                    "strawberry with powdery mildew disease",
+                    "normal strawberry fruit",
+                    "normal strawberry plant",
+                    "no related to strawberry plant",
+                        ]
     chinese_text=["营养不良的草莓",
                     "虫害草莓",
                     "缺钙型草莓",

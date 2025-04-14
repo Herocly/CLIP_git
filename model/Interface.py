@@ -73,17 +73,7 @@ def upload():
         #                                "disaster",
         #                                "AI",
         #                                "festival"]))
-        return jsonify(run.strawberry_read_with_post(path_tmp,
-                                      ["Nutrient-deficient strawberry",
-                                       "Strawberry with Aphid disease",
-                                       "strawberry with Calcium-deficient disease",
-                                        "strawberry with leaf spot disease",
-                                        "strawberry with powdery mildew disease",
-                                        #"strawberry with other disease",
-                                        "normal strawberry fruit",
-                                        "normal strawberry plant",
-                                        "no related to strawberry plant",
-                                       ]))
+        return jsonify(run.strawberry_read_with_post(path_tmp))#将输入传到后端
 
     except Exception as e:
         return jsonify({
