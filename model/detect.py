@@ -121,10 +121,9 @@ def class_demo_strawberry_post(path , text_language):
                     "缺钙型草莓",
                     "叶斑病草莓",
                     "白粉病草莓",
-                    #"strawberry with other disease",
                     "正常的草莓果实",
                     "正常的草莓植株",
-                    "与草莓无关",
+                    "该张照片与草莓无关",
     ]
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
