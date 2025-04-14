@@ -156,16 +156,24 @@ def class_demo_strawberry_post(path , text_language):
 
 
             temp_list = [(text,prob) for text, prob  in zip(chinese_text,probs[i])]
+                #将文本与准确度打包生成list列表
             temp_list.sort(key=lambda x: x[1],reverse=True)
+                #按照准确度从高到低排序
 
-            dict_list = [{'index': '{}'.format(index),'text': text, 'prob': '{:.2f}'.format(prob*100)} for index,(text,prob) in enumerate(temp_list) if prob > 0.00005]
+
+            #所有可能的结果总表
+            dict_list = [{'index': '{}'.format(index),  #使用enumerate创建一个额外的序号作为主键
+                          'text': text,                 #文本：对应的提示词
+                          'prob': '{:.2f}'.format(prob*100)}    #准确度：重新格式化为带2位小数的百分比
+                                for index,(text,prob) in enumerate(temp_list) 
+                                    if prob > 0.00005]  #小于0.005%的结果忽略不计
 
             data =  {
-                    "success": True,
-                    "result": {
-                        "predict":'{}'.format(chinese_text[id]),
-                        "prob":'{:.2f}'.format(probs[i,id]*100),
-                        "all": dict_list
+                    "success": True,        #返回识别成功
+                    "result": {             
+                        "predict":'{}'.format(chinese_text[id]),        #最高准确度的结果
+                        "prob":'{:.2f}'.format(probs[i,id]*100),        #对应的准确度
+                        "all": dict_list                                #总表
                     }
                 }
             
