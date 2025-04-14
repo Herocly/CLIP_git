@@ -1,0 +1,420 @@
+train5_0002.jpg   a photo of nutrient-deficient strawberry
+train5_0001.jpg   a photo of nutrient-deficient strawberry
+train5_0003.jpg   a photo of nutrient-deficient strawberry
+train5_0004.jpg   a photo of nutrient-deficient strawberry
+train5_0005.jpg   a photo of nutrient-deficient strawberry
+train5_0006.jpg   a photo of nutrient-deficient strawberry
+train5_0007.jpg   a photo of nutrient-deficient strawberry
+train5_0008.jpg   a photo of nutrient-deficient strawberry
+train5_0009.jpg   a photo of nutrient-deficient strawberry
+train5_0010.jpg   a photo of nutrient-deficient strawberry
+train5_0011.jpg   a photo of nutrient-deficient strawberry
+train5_0012.jpg   a photo of nutrient-deficient strawberry
+train5_0013.jpg   a photo of nutrient-deficient strawberry
+train5_0014.jpg   a photo of nutrient-deficient strawberry
+train5_0015.jpg   a photo of nutrient-deficient strawberry
+train5_0016.jpg   a photo of nutrient-deficient strawberry
+train5_0017.jpg   a photo of nutrient-deficient strawberry
+train5_0018.jpg   a photo of nutrient-deficient strawberry
+train5_0019.jpg   a photo of nutrient-deficient strawberry
+train5_0020.jpg   a photo of nutrient-deficient strawberry
+train5_0021.jpg   a photo of nutrient-deficient strawberry
+train5_0022.jpg   a photo of nutrient-deficient strawberry
+train5_0023.jpg   a photo of nutrient-deficient strawberry
+train5_0024.jpg   a photo of nutrient-deficient strawberry
+train5_0025.jpg   a photo of nutrient-deficient strawberry
+train5_0026.jpg   a photo of nutrient-deficient strawberry
+train5_0027.jpg   a photo of nutrient-deficient strawberry
+train5_0028.jpg   a photo of nutrient-deficient strawberry
+train5_0029.jpg   a photo of nutrient-deficient strawberry
+train5_0030.jpg   a photo of nutrient-deficient strawberry
+train5_0031.jpg   a photo of nutrient-deficient strawberry
+train5_0032.jpg   a photo of nutrient-deficient strawberry
+train5_0033.jpg   a photo of nutrient-deficient strawberry
+train5_0034.jpg   a photo of nutrient-deficient strawberry
+train5_0035.jpg   a photo of nutrient-deficient strawberry
+train5_0036.jpg   a photo of nutrient-deficient strawberry
+train5_0037.jpg   a photo of nutrient-deficient strawberry
+train5_0038.jpg   a photo of nutrient-deficient strawberry
+train5_0039.jpg   a photo of nutrient-deficient strawberry
+train5_0040.jpg   a photo of nutrient-deficient strawberry
+train5_0041.jpg   a photo of nutrient-deficient strawberry
+train5_0042.jpg   a photo of nutrient-deficient strawberry
+train5_0043.jpg   a photo of nutrient-deficient strawberry
+train5_0044.jpg   a photo of nutrient-deficient strawberry
+train5_0045.jpg   a photo of nutrient-deficient strawberry
+train5_0046.jpg   a photo of nutrient-deficient strawberry
+train5_0047.jpg   a photo of nutrient-deficient strawberry
+train5_0048.jpg   a photo of nutrient-deficient strawberry
+train5_0049.jpg   a photo of nutrient-deficient strawberry
+train5_0050.jpg   a photo of nutrient-deficient strawberry
+train5_0051.jpg   a photo of nutrient-deficient strawberry
+train5_0052.jpg   a photo of nutrient-deficient strawberry
+train5_0053.jpg   a photo of nutrient-deficient strawberry
+train5_0054.jpg   a photo of nutrient-deficient strawberry
+train5_0055.jpg   a photo of nutrient-deficient strawberry
+train5_0056.jpg   a photo of nutrient-deficient strawberry
+train5_0057.jpg   a photo of nutrient-deficient strawberry
+train5_0058.jpg   a photo of nutrient-deficient strawberry
+train5_0059.jpg   a photo of nutrient-deficient strawberry
+train5_0060.jpg   a photo of nutrient-deficient strawberry
+train5_0061.jpg   a photo of nutrient-deficient strawberry
+train5_0062.jpg   a photo of nutrient-deficient strawberry
+train5_0063.jpg   a photo of nutrient-deficient strawberry
+train5_0064.jpg   a photo of nutrient-deficient strawberry
+train5_0065.jpg   a photo of nutrient-deficient strawberry
+train5_0066.jpg   a photo of nutrient-deficient strawberry
+train5_0067.jpg   a photo of nutrient-deficient strawberry
+train5_0068.jpg   a photo of nutrient-deficient strawberry
+train5_0069.jpg   a photo of nutrient-deficient strawberry
+train5_0070.jpg   a photo of nutrient-deficient strawberry
+train5_0071.jpg   a photo of nutrient-deficient strawberry
+train5_0072.jpg   a photo of nutrient-deficient strawberry
+train5_0073.jpg   a photo of nutrient-deficient strawberry
+train5_0074.jpg   a photo of nutrient-deficient strawberry
+num_0001.jpg  a photo of aphid strawberry
+num_0002.jpg  a photo of aphid strawberry
+num_0003.jpg  a photo of aphid strawberry
+num_0004.jpg  a photo of aphid strawberry
+num_0005.jpg  a photo of aphid strawberry
+num_0006.jpg  a photo of aphid strawberry
+num_0007.jpg  a photo of aphid strawberry
+num_0008.jpg  a photo of aphid strawberry
+num_0009.jpg  a photo of aphid strawberry
+num_0010.jpg  a photo of aphid strawberry
+num_0011.jpg  a photo of aphid strawberry
+num_0012.jpg  a photo of aphid strawberry
+num_0013.jpg  a photo of aphid strawberry
+num_0014.jpg  a photo of aphid strawberry
+num_0015.jpg  a photo of aphid strawberry
+num_0016.jpg  a photo of aphid strawberry
+num_0017.jpg  a photo of aphid strawberry
+num_0018.jpg  a photo of aphid strawberry
+num_0019.jpg  a photo of aphid strawberry
+num_0020.jpg  a photo of aphid strawberry
+num_0021.jpg  a photo of aphid strawberry
+num_0022.jpg  a photo of aphid strawberry
+num_0023.jpg  a photo of aphid strawberry
+train_3021.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3022.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3023.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3024.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3025.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3026.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3027.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3028.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3029.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3030.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3031.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3032.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3033.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3034.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3035.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3036.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3037.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3038.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3039.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3040.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3041.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3042.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3043.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3044.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3045.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3046.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3047.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3048.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3049.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3050.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3051.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3052.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3053.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3054.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3055.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3056.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3057.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3058.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3059.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3060.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3061.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3062.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3063.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3064.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3065.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3066.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3067.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3068.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3069.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3070.jpeg  a photo of strawberry with calcium-deficient  disease
+train_3071.jpeg  a photo of strawberry with calcium-deficient  disease
+1001.jpeg a photo of normal strawberry without disease
+1002.jpeg a photo of normal strawberry without disease
+1003.jpeg a photo of normal strawberry without disease
+1004.jpeg a photo of normal strawberry without disease
+1005.jpeg a photo of normal strawberry without disease
+1006.jpeg a photo of normal strawberry without disease
+1007.jpeg a photo of normal strawberry without disease
+1008.jpeg a photo of normal strawberry without disease
+1009.jpeg a photo of normal strawberry without disease
+1010.jpeg a photo of normal strawberry without disease
+1011.jpeg a photo of normal strawberry without disease
+1012.jpeg a photo of normal strawberry without disease
+1013.jpeg a photo of normal strawberry without disease
+1014.jpeg a photo of normal strawberry without disease
+1015.jpeg a photo of normal strawberry without disease
+1016.jpeg a photo of normal strawberry without disease
+1017.jpeg a photo of normal strawberry without disease
+1018.jpeg a photo of normal strawberry without disease
+1019.jpeg a photo of normal strawberry without disease
+1020.jpeg a photo of normal strawberry without disease
+1021.jpeg a photo of normal strawberry without disease
+1022.jpeg a photo of normal strawberry without disease
+1023.jpeg a photo of normal strawberry without disease
+1024.jpeg a photo of normal strawberry without disease
+1025.jpeg a photo of normal strawberry without disease
+1026.jpeg a photo of normal strawberry without disease
+1027.jpeg a photo of normal strawberry without disease
+1028.jpeg a photo of normal strawberry without disease
+1029.jpeg a photo of normal strawberry without disease
+1030.jpeg a photo of normal strawberry without disease
+1031.jpeg a photo of normal strawberry without disease
+1032.jpeg a photo of normal strawberry without disease
+1033.jpeg a photo of normal strawberry without disease
+1034.jpeg a photo of normal strawberry without disease
+1035.jpeg a photo of normal strawberry without disease
+1036.jpeg a photo of normal strawberry without disease
+1037.jpeg a photo of normal strawberry without disease
+1038.jpeg a photo of normal strawberry without disease
+1039.jpeg a photo of normal strawberry without disease
+1040.jpeg a photo of normal strawberry without disease
+1041.jpeg a photo of normal strawberry without disease
+1042.jpeg a photo of normal strawberry without disease
+1043.jpeg a photo of normal strawberry without disease
+1044.jpeg a photo of normal strawberry without disease
+1045.jpeg a photo of normal strawberry without disease
+1046.jpeg a photo of normal strawberry without disease
+1047.jpeg a photo of normal strawberry without disease
+1048.jpeg a photo of normal strawberry without disease
+1049.jpeg a photo of normal strawberry without disease
+1050.jpeg a photo of normal strawberry without disease
+1051.jpeg a photo of normal strawberry without disease
+1052.jpeg a photo of normal strawberry without disease
+1053.jpeg a photo of normal strawberry without disease
+1054.jpeg a photo of normal strawberry without disease
+1055.jpeg a photo of normal strawberry without disease
+1056.jpeg a photo of normal strawberry without disease
+1057.jpeg a photo of normal strawberry without disease
+1058.jpeg a photo of normal strawberry without disease
+1059.jpeg a photo of normal strawberry without disease
+1060.jpeg a photo of normal strawberry without disease
+1061.jpeg a photo of normal strawberry without disease
+1062.jpeg a photo of normal strawberry without disease
+1063.jpeg a photo of normal strawberry without disease
+1064.jpeg a photo of normal strawberry without disease
+1065.jpeg a photo of normal strawberry without disease
+1066.jpeg a photo of normal strawberry without disease
+1067.jpeg a photo of normal strawberry without disease
+1068.jpeg a photo of normal strawberry without disease
+1069.jpeg a photo of normal strawberry without disease
+1070.jpeg a photo of normal strawberry without disease
+1071.jpeg a photo of normal strawberry without disease
+1072.jpeg a photo of normal strawberry without disease
+1073.jpeg a photo of normal strawberry without disease
+1074.jpeg a photo of normal strawberry without disease
+1075.jpeg a photo of normal strawberry without disease
+1076.jpeg a photo of normal strawberry without disease
+1077.jpeg a photo of normal strawberry without disease
+1078.jpeg a photo of normal strawberry without disease
+1079.jpeg a photo of normal strawberry without disease
+1080.jpeg a photo of normal strawberry without disease
+1081.jpeg a photo of normal strawberry without disease
+1082.jpeg a photo of normal strawberry without disease
+1083.jpeg a photo of normal strawberry without disease
+1084.jpeg a photo of normal strawberry without disease
+1085.jpeg a photo of normal strawberry without disease
+1086.jpeg a photo of normal strawberry without disease
+1087.jpeg a photo of normal strawberry without disease
+1088.jpeg a photo of normal strawberry without disease
+1089.jpeg a photo of normal strawberry without disease
+1090.jpeg a photo of normal strawberry without disease
+1091.jpeg a photo of normal strawberry without disease
+1092.jpeg a photo of normal strawberry without disease
+1093.jpeg a photo of normal strawberry without disease
+1094.jpeg a photo of normal strawberry without disease
+1095.jpeg a photo of normal strawberry without disease
+1096.jpeg a photo of normal strawberry without disease
+1097.jpeg a photo of normal strawberry without disease
+1098.jpeg a photo of normal strawberry without disease
+1099.jpeg a photo of normal strawberry without disease
+1100.jpeg a photo of normal strawberry without disease
+1101.jpeg a photo of normal strawberry without disease
+1102.jpeg a photo of normal strawberry without disease
+1103.jpeg a photo of normal strawberry without disease
+1104.jpeg a photo of normal strawberry without disease
+3001.jpeg strawberry plant with leaf spot disease
+3002.jpeg strawberry plant with leaf spot disease
+3003.jpeg strawberry plant with leaf spot disease
+3004.jpeg strawberry plant with leaf spot disease
+3005.jpeg strawberry plant with leaf spot disease
+3006.jpeg strawberry plant with leaf spot disease
+3007.jpeg strawberry plant with leaf spot disease
+3008.jpeg strawberry plant with leaf spot disease
+3009.jpeg strawberry plant with leaf spot disease
+3010.jpeg strawberry plant with leaf spot disease
+3011.jpeg strawberry plant with leaf spot disease
+3012.jpeg strawberry plant with leaf spot disease
+3013.jpeg strawberry plant with leaf spot disease
+3014.jpeg strawberry plant with leaf spot disease
+3015.jpeg strawberry plant with leaf spot disease
+3016.jpeg strawberry plant with leaf spot disease
+3017.jpeg strawberry plant with leaf spot disease
+3018.jpeg strawberry plant with leaf spot disease
+3019.jpeg strawberry plant with leaf spot disease
+3020.jpeg strawberry plant with leaf spot disease
+3021.jpeg strawberry plant with leaf spot disease
+3022.jpeg strawberry plant with leaf spot disease
+3023.jpeg strawberry plant with leaf spot disease
+3024.jpeg strawberry plant with leaf spot disease
+3025.jpeg strawberry plant with leaf spot disease
+3026.jpeg strawberry plant with leaf spot disease
+3027.jpeg strawberry plant with leaf spot disease
+3028.jpeg strawberry plant with leaf spot disease
+3029.jpeg strawberry plant with leaf spot disease
+3030.jpeg strawberry plant with leaf spot disease
+3031.jpeg strawberry plant with leaf spot disease
+3032.jpeg strawberry plant with leaf spot disease
+3033.jpeg strawberry plant with leaf spot disease
+3034.jpeg strawberry plant with leaf spot disease
+3035.jpeg strawberry plant with leaf spot disease
+3036.jpeg strawberry plant with leaf spot disease
+3037.jpeg strawberry plant with leaf spot disease
+3038.jpeg strawberry plant with leaf spot disease
+3039.jpeg strawberry plant with leaf spot disease
+3040.jpeg strawberry plant with leaf spot disease
+3041.jpeg strawberry plant with leaf spot disease
+3042.jpeg strawberry plant with leaf spot disease
+3043.jpeg strawberry plant with leaf spot disease
+3044.jpeg strawberry plant with leaf spot disease
+3045.jpeg strawberry plant with leaf spot disease
+3046.jpeg strawberry plant with leaf spot disease
+3047.jpeg strawberry plant with leaf spot disease
+3048.jpeg strawberry plant with leaf spot disease
+3049.jpeg strawberry plant with leaf spot disease
+3050.jpeg strawberry plant with leaf spot disease
+3051.jpeg strawberry plant with leaf spot disease
+3052.jpeg strawberry plant with leaf spot disease
+3053.jpeg strawberry plant with leaf spot disease
+3054.jpeg strawberry plant with leaf spot disease
+3055.jpeg strawberry plant with leaf spot disease
+3056.jpeg strawberry plant with leaf spot disease
+3057.jpeg strawberry plant with leaf spot disease
+3058.jpeg strawberry plant with leaf spot disease
+3059.jpeg strawberry plant with leaf spot disease
+3060.jpeg strawberry plant with leaf spot disease
+3061.jpeg strawberry plant with leaf spot disease
+3062.jpeg strawberry plant with leaf spot disease
+3063.jpeg strawberry plant with leaf spot disease
+3064.jpeg strawberry plant with leaf spot disease
+3065.jpeg strawberry plant with leaf spot disease
+3066.jpeg strawberry plant with leaf spot disease
+3067.jpeg strawberry plant with leaf spot disease
+3068.jpeg strawberry plant with leaf spot disease
+3069.jpeg strawberry plant with leaf spot disease
+3070.jpeg strawberry plant with leaf spot disease
+3071.jpeg strawberry plant with leaf spot disease
+3072.jpeg strawberry plant with leaf spot disease
+3073.jpeg strawberry plant with leaf spot disease
+3074.jpeg strawberry plant with leaf spot disease
+3075.jpeg strawberry plant with leaf spot disease
+3076.jpeg strawberry plant with leaf spot disease
+3077.jpeg strawberry plant with leaf spot disease
+3078.jpeg strawberry plant with leaf spot disease
+3079.jpeg strawberry plant with leaf spot disease
+train6_0001.jpg a photo of strawberry with powdery mildew disease
+train6_0002.jpg a photo of strawberry with powdery mildew disease
+train6_0003.jpg a photo of strawberry with powdery mildew disease
+train6_0004.jpg a photo of strawberry with powdery mildew disease
+train6_0005.jpg a photo of strawberry with powdery mildew disease
+train6_0006.jpg a photo of strawberry with powdery mildew disease
+train6_0007.jpg a photo of strawberry with powdery mildew disease
+train6_0008.jpg a photo of strawberry with powdery mildew disease
+train6_0009.jpg a photo of strawberry with powdery mildew disease
+train6_0010.jpg a photo of strawberry with powdery mildew disease
+train6_0011.jpg a photo of strawberry with powdery mildew disease
+train6_0012.jpg a photo of strawberry with powdery mildew disease
+train6_0013.jpg a photo of strawberry with powdery mildew disease
+train6_0014.jpg a photo of strawberry with powdery mildew disease
+train6_0015.jpg a photo of strawberry with powdery mildew disease
+train6_0016.jpg a photo of strawberry with powdery mildew disease
+train6_0017.jpg a photo of strawberry with powdery mildew disease
+train6_0018.jpg a photo of strawberry with powdery mildew disease
+train6_0019.jpg a photo of strawberry with powdery mildew disease
+train6_0020.jpg a photo of strawberry with powdery mildew disease
+train6_0021.jpg a photo of strawberry with powdery mildew disease
+train6_0022.jpg a photo of strawberry with powdery mildew disease
+train6_0023.jpg a photo of strawberry with powdery mildew disease
+train6_0024.jpg a photo of strawberry with powdery mildew disease
+train6_0025.jpg a photo of strawberry with powdery mildew disease
+train6_0026.jpg a photo of strawberry with powdery mildew disease
+train6_0027.jpg a photo of strawberry with powdery mildew disease
+train6_0028.jpg a photo of strawberry with powdery mildew disease
+train6_0029.jpg a photo of strawberry with powdery mildew disease
+train6_0030.jpg a photo of strawberry with powdery mildew disease
+train6_0031.jpg a photo of strawberry with powdery mildew disease
+train6_0032.jpg a photo of strawberry with powdery mildew disease
+train6_0033.jpg a photo of strawberry with powdery mildew disease
+train6_0034.jpg a photo of strawberry with powdery mildew disease
+train6_0035.jpg a photo of strawberry with powdery mildew disease
+train6_0036.jpg a photo of strawberry with powdery mildew disease
+train6_0037.jpg a photo of strawberry with powdery mildew disease
+train6_0038.jpg a photo of strawberry with powdery mildew disease
+train6_0039.jpg a photo of strawberry with powdery mildew disease
+train6_0040.jpg a photo of strawberry with powdery mildew disease
+train6_0041.jpg a photo of strawberry with powdery mildew disease
+train6_0042.jpg a photo of strawberry with powdery mildew disease
+train6_0043.jpg a photo of strawberry with powdery mildew disease
+train6_0044.jpg a photo of strawberry with powdery mildew disease
+train6_0045.jpg a photo of strawberry with powdery mildew disease
+train6_0046.jpg a photo of strawberry with powdery mildew disease
+train6_0047.jpg a photo of strawberry with powdery mildew disease
+train6_0048.jpg a photo of strawberry with powdery mildew disease
+train6_0049.jpg a photo of strawberry with powdery mildew disease
+train6_0050.jpg a photo of strawberry with powdery mildew disease
+train6_0051.jpg a photo of strawberry with powdery mildew disease
+train6_0052.jpg a photo of strawberry with powdery mildew disease
+train6_0053.jpg a photo of strawberry with powdery mildew disease
+train6_0054.jpg a photo of strawberry with powdery mildew disease
+train6_0055.jpg a photo of strawberry with powdery mildew disease
+train6_0056.jpg a photo of strawberry with powdery mildew disease
+train6_0057.jpg a photo of strawberry with powdery mildew disease
+train6_0058.jpg a photo of strawberry with powdery mildew disease
+train6_0059.jpg a photo of strawberry with powdery mildew disease
+train6_0060.jpg a photo of strawberry with powdery mildew disease
+train6_0061.jpg a photo of strawberry with powdery mildew disease
+train6_0062.jpg a photo of strawberry with powdery mildew disease
+train6_0063.jpg a photo of strawberry with powdery mildew disease
+train6_0064.jpg a photo of strawberry with powdery mildew disease
+train6_0065.jpg a photo of strawberry with powdery mildew disease
+train6_0066.jpg a photo of strawberry with powdery mildew disease
+train6_0067.jpg a photo of strawberry with powdery mildew disease
+train6_0068.jpg a photo of strawberry with powdery mildew disease
+train6_0069.jpg a photo of strawberry with powdery mildew disease
+train6_0070.jpg a photo of strawberry with powdery mildew disease
+train6_0071.jpg a photo of strawberry with powdery mildew disease
+train6_0072.jpg a photo of strawberry with powdery mildew disease
+train6_0073.jpg a photo of strawberry with powdery mildew disease
+train6_0074.jpg a photo of strawberry with powdery mildew disease
+train6_0075.jpg a photo of strawberry with powdery mildew disease
+train6_0076.jpg a photo of strawberry with powdery mildew disease
+train6_0077.jpg a photo of strawberry with powdery mildew disease
+train6_0078.jpg a photo of strawberry with powdery mildew disease
+train6_0079.jpg a photo of strawberry with powdery mildew disease
+train6_0080.jpg a photo of strawberry with powdery mildew disease
+train6_0081.jpg a photo of strawberry with powdery mildew disease
+train6_0082.jpg a photo of strawberry with powdery mildew disease
+train6_0083.jpg a photo of strawberry with powdery mildew disease
+train6_0084.jpg a photo of strawberry with powdery mildew disease
+train6_0085.jpg a photo of strawberry with powdery mildew disease
+train6_0086.jpg a photo of strawberry with powdery mildew disease
+train6_0087.jpg a photo of strawberry with powdery mildew disease
+train6_0088.jpg a photo of strawberry with powdery mildew disease
+train6_0089.jpg a photo of strawberry with powdery mildew disease

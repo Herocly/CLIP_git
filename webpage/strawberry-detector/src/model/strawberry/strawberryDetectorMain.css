@@ -1,0 +1,198 @@
+.strawberryDetector{
+    padding: 10px;
+    font-family: Arial;
+    height: 100%;
+    
+}
+
+.imageUploadAndButtonDiv{
+    float: left;
+    width: fit-content;
+    max-width: 350px;
+}
+
+.resultDiv{
+    float: left;
+    width: 60%;
+    height:400px;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 20p;
+}
+
+
+
+
+
+
+
+
+.strawberryImgShow{
+    margin: 15px;
+    padding: 5px;
+    flex: 1;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: -10px 5px 20px 1px #6067cc;
+    transition: box-shadow .2s;
+
+    border-radius: 3px;
+
+}
+
+.strawberryImgShow:hover{
+    flex: 1;
+    margin: 15px;
+    padding: 5px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #ccc;
+    box-shadow: -10px 5px 20px 1px #7178dd;
+    transition: box-shadow .2s;
+    border-radius: 3px;
+}
+
+
+
+.noneImgShow{
+    flex: 1;
+    margin: 15px;
+    padding: 5px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #8888ff;
+    box-shadow: -10px 5px 20px 1px #6067cc;
+    transition: box-shadow .2s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+}
+
+.noneImgShow:hover{
+    flex: 1;
+    margin: 15px;
+    padding: 5px;
+    min-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #8888ff;
+    box-shadow: -10px 5px 20px 1px #7178dd;
+    transition: box-shadow .2s;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+
+}
+
+.noneImgShowText{
+    
+    color: #bbf;
+    margin-top: 40%;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+
+.buttonArea{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+.buttonAreaButton {
+    flex: 1;
+    --glow-color: rgb(132, 139, 239);
+    --glow-spread-color: rgba(138, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(210, 206, 255);
+    --btn-color: rgb(131, 127, 244);
+    width: 120px;
+    height: 30%;
+    border: .21em solid rgb(156,165,250);
+    padding: 1em 3em;
+    color: #dcddff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: .35em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .buttonAreaButton::after {
+        flex: 1;
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 120%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--glow-spread-color);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .buttonAreaButton:hover {
+        flex: 1;
+        color: rgb(190, 200, 255);
+        background-color: rgb(150, 148, 239);
+        box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+
+   
+   
+   .buttonAreaButton:active {
+        flex: 1;
+        box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+   
+.uploadStateText{
+    transition: opacity .5s;
+}
+
+
+.detectResultType{
+    transition: opacity .5s;
+    transition-delay: .1s;
+}
+.detectProb{
+    transition: opacity .5s;
+    transition-delay: .2s;
+}
+.allDetectProb{
+    transition: opacity .5s;
+    transition-delay: .4s;
+}
+
+
+   .--hidden {
+    transition: opacity .5s;
+    opacity: 0;
+  }
+   
+  .--visible {
+    opacity: 1;
+  }
+
