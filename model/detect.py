@@ -123,7 +123,7 @@ def class_demo_strawberry_post(path , text_language):
                     "白粉病草莓",
                     "正常的草莓果实",
                     "正常的草莓植株",
-                    "该张照片和草莓无关",
+                    "该张照片草莓无关",
     ]
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
