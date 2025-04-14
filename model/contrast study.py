@@ -13,8 +13,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
 dataset = Strawberry_dataset("dataset/images","dataset/labels/labels.txt",preprocess)
-dataloader = DataLoader(dataset, batch_size=5, shuffle=True)
-"每次处理5对文本加图像，shuffle表示训练前的同时把数据打乱"
+dataloader = DataLoader(dataset, batch_size=10, shuffle=True)
+"每次处理10对文本加图像，shuffle表示训练前的同时把数据打乱"
 
 loss_img = torch.nn.CrossEntropyLoss()
 loss_txt = torch.nn.CrossEntropyLoss()
