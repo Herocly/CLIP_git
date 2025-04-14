@@ -116,23 +116,27 @@ def class_demo_post(path , text_language):
                 }
             
 def class_demo_strawberry_post(path):
-    text_language=["Nutrient-deficient strawberry",
-                    "Strawberry with Aphid disease",
-                    "strawberry with Calcium-deficient disease",
-                    "strawberry with leaf spot disease",
-                    "strawberry with powdery mildew disease",
-                    "normal strawberry fruit",
-                    "normal strawberry plant",
-                    "no related to strawberry plant",
+    text_language=['Strawberry with Gray Mould disease',
+                    "Strawberry V-shaped brown leaf spot",
+                    "Strawberry with fertilizer damage disease",
+                    "Strawberry blight",
+                    "Strawberry leaf spot caused by Ramularia grevilleana",
+                    "Strawberry calcium deficiency",
+                    "Strawberry magnesium deficiency",
+                    "Strawberry Leaf Spot disease",
+                    "Strawberry with anthracnose disease"
+                    "No related to strawberry"
                         ]
-    chinese_text=["营养不良的草莓",
-                    "虫害草莓",
-                    "缺钙型草莓",
-                    "叶斑病草莓",
-                    "白粉病草莓",
-                    "正常的草莓果实",
-                    "正常的草莓植株",
-                    "该张照片和草莓无关",
+    chinese_text=["灰霉病草莓",
+                    "草莓V型褐斑病",
+                    "草莓肥害",
+                    "草莓枯萎病",
+                    "草莓拟盘多毛孢叶斑病",
+                    "草莓缺钙",
+                    "草莓缺镁",
+                    "草莓蛇眼病",
+                    "草莓炭疽病"
+                    "该照片和草莓无关"
     ]
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
