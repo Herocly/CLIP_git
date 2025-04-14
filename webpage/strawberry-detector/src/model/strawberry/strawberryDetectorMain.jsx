@@ -1,6 +1,5 @@
 import { useState , useRef , useEffect } from 'react';
 import ProgressBarProb from './module/ProgressBarProb';
-import ProgressBarProbAnm from './module/ProgressBarProbAnm'
 //useStae是一个钩子，用来表示函数的状态
 
 import './strawberryDetectorMain.css'
@@ -29,14 +28,14 @@ function StrawberryDetectorMain() {
     };
 
     const handleUploadImageButtonClick = () =>{
-        inputImageUploadRef.current.click()
+        inputImageUploadRef.current.click() //点击“选择图片”按钮时同样触发上传图片
     }
 
 
-    const analyzeResultJson = (result) =>{
-        setDetectResultType(`${result.predict}`)
-        setDetectResultProb(`${result.prob}`)
-        setDetectResultOther(result.all)
+    const analyzeResultJson = (result) =>{          //解析来自后端的json文本
+        setDetectResultType(`${result.predict}`)    //推测的结果
+        setDetectResultProb(`${result.prob}`)       //准确度
+        setDetectResultOther(result.all)            //所有可能的结果
     }
 
     //handleDetect包含异步操作，通过async/await来处理异步请求
@@ -65,19 +64,19 @@ function StrawberryDetectorMain() {
 
             if(data.success){
                 setState(1)
-                setStateText('识别成功！');//上传结果
-                analyzeResultJson(data.result)
+                setStateText('识别成功！');
+                analyzeResultJson(data.result)  //识别成功，设置状态为1（fine.）,解析json
             }else{
                 setState(-1)
-                setStateText(`识别失败，${data.error} `);//上传结果
+                setStateText(`识别失败，${data.error} `);//识别失败，设置状态为-1，读取错误信息
             }
             
         } catch (error) {
             setStateText('识别失败，请稍后再试。错误码：' + error);
             setState(-1);
-            console.error(error);
+            console.error(error);   //识别过程中error处理
         } finally {
-            setLoading(false);
+            setLoading(false);      //结束加载过程
         } 
     
         // handleDetect();
@@ -142,19 +141,19 @@ function StrawberryDetectorMain() {
                     }
                     </div>
 
-                </label>
+                </label> 
 
                 <div className='buttonArea'>
 
                     <button onClick={handleUploadImageButtonClick} disabled={loading} 
-                        className={`buttonAreaButton ${(loading)?'disabledButton':'enabledButton'}}`}
+                        className={`buttonAreaButton ${(loading)?'disabledButton':'enabledButton'/*仅在加载时，选择图片失效*/}}`}
                         style={{ padding: '10px 20px', marginBottom: '10px' }}>
                         {image ?  '重新选择' : '选择图片' }
                     </button>
                     
 
                     <button onClick={handleStartDetect} disabled={loading || !image} 
-                        className={`buttonAreaButton ${(loading || !image)?'disabledButton':'enabledButton'}}`} 
+                        className={`buttonAreaButton ${(loading || !image)?'disabledButton':'enabledButton'/*加载或无图片时，识别按钮失效*/}}`} 
                         style={{ padding: '10px 20px', marginBottom: '10px'}}>
                         {loading ? '识别中...' : '识别病害'}
                     </button>
@@ -164,34 +163,32 @@ function StrawberryDetectorMain() {
             </div>
 
             <div className='resultDiv'>
-                <div className={`uploadStateText ${(state!=0)?'--visible':'--hidden'}`}
+                <div className={`uploadStateText ${(state!=0)?'--visible':'--hidden'/*状态信息*/}`}
                     style={{marginTop:'10px', fontSize:'20px'}}>{state_text}</div>
                 
-                <div className={`detectResultType ${(state==1 && !loading)?'--visible':'--hidden'}`} 
+                <div className={`detectResultType ${(state==1 && !loading)?'--visible':'--hidden'/*识别的结果*/}`} 
                     style={{marginTop:'10px', fontSize:'20px'}}>
                     识别结果：{detect_result_type}
                 </div>
 
-                <div className={`detectProb ${(state==1 && !loading)?'--visible':'--hidden'}`}
+                <div className={`detectProb ${(state==1 && !loading)?'--visible':'--hidden'/*最高的置信度*/}`}
                     style={{marginTop:'10px', fontSize:'20px'}}>
                     置信度：{detect_result_prob}%
                 </div>
                 
-                <div className={`allDetectProb ${(state==1 && !loading)?'--visible':'--hidden'}`} 
+                <div className={`allDetectProb ${(state==1 && !loading)?'--visible':'--hidden'/*所有可能性高于0.005%的结果*/}`} 
                     style={{marginTop:'10px', fontSize:'20px'}}>
                         所有可能结果：
-                        <table>{detect_result_other.map((type) => (
+                        <table>{/*使用表格格式化地展示所有可能结果*/detect_result_other.map((type) => (
                             <tr key={type.index} 
                                 style={{transition: 'opacity .5s ease-in-out',
-                                        transitionDelay: `${type.index * 50 + 500}ms`}}
+                                        transitionDelay: `${type.index * 50 + 500/*逐条显示结果*/}ms`}}
                                 className={`${(state==1 && !loading)?'--visible':'--hidden'}`}>
-                                <td style={{width:'350px', float:'left', textAlign:'right'}}>{type.text}:</td>
+                                <td style={{width:'fit-content', float:'left', textAlign:'right'}}>{type.text}:</td>
                                 <td style={{marginLeft:'15px', float:'left', minWidth:'70px' ,textAlign:'right'}}>{type.prob}%</td>
                                 <td style={{paddingLeft:'15px', float:'left', width:'150px', height:"fit-content"}}>
                                     <ProgressBarProb percent={type.prob}/>
-                                    {/* <div className="progress-container">
-                                        <div className="progress-bar" style={{width:`${50}%`}}></div>
-                                    </div> */}
+                                    {/* 使用自定义的百分比条可视化比例*/}
                                 </td>
                             </tr>
                             ))}
