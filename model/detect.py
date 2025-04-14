@@ -117,14 +117,14 @@ def class_demo_post(path , text_language):
             
 def class_demo_strawberry_post(path , text_language):
     chinese_text=["营养不良的草莓",
-                    "受到虫害的草莓",
-                    "缺钙刑草莓",
+                    "虫害草莓",
+                    "缺钙型草莓",
                     "叶斑病草莓",
                     "白粉病草莓",
                     #"strawberry with other disease",
                     "正常的草莓果实",
                     "正常的草莓植株",
-                    "于草莓无关",
+                    "与草莓无关",
     ]
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
