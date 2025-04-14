@@ -184,7 +184,7 @@ function StrawberryDetectorMain() {
                                 style={{transition: 'opacity .5s ease-in-out',
                                         transitionDelay: `${type.index * 50 + 500/*逐条显示结果*/}ms`}}
                                 className={`${(state==1 && !loading)?'--visible':'--hidden'}`}>
-                                <td style={{width:'fit-content', float:'left', textAlign:'right'}}>{type.text}:</td>
+                                <td style={{width:'350px', float:'left', textAlign:'right'}}>{type.text}:</td>
                                 <td style={{marginLeft:'15px', float:'left', minWidth:'70px' ,textAlign:'right'}}>{type.prob}%</td>
                                 <td style={{paddingLeft:'15px', float:'left', width:'150px', height:"fit-content"}}>
                                     <ProgressBarProb percent={type.prob}/>
