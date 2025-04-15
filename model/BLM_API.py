@@ -69,20 +69,21 @@ def gpt_labs(prompt: str):
         "content": [
           {
             "type": "text",
-            "text": f"""
-            I am training a model using contrastive image-text learning.
-            Please act as an image description generator.
-
-            Given the class name '{prompt}', generate 10 unique short descriptions.
-            Each description should follow this format:
-            "a photo of {prompt} attribute"
-            
-            Do not mention some artificial environments of this {prompt}
-
-            The [attribute] should describe visual traits like color, shape, condition, or scene (e.g. 'ripe and red', 'covered with white mold', 'on a wooden table').
-
-            No explanations, no numbering. Just return the 10 descriptions, one per line.
-            """
+            # "text": f"""
+            # I am training a model using contrastive image-text learning.
+            # Please act as an image description generator.
+            #
+            # Given the class name '{prompt}', generate 10 unique short descriptions.
+            # Each description should follow this format:
+            # "a photo of {prompt} attribute"
+            #
+            # Do not mention some artificial environments of this {prompt}
+            #
+            # The [attribute] should describe visual traits like color, shape, condition, or scene (e.g. 'ripe and red', 'covered with white mold', 'on a wooden table').
+            #
+            # No explanations, no numbering. Just return the 10 descriptions, one per line.
+            # """
+              "text":f"You are a professional plant pathologist specializing in strawberries. Please write 7 different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {prompt} for use in image-to-text retrieval. Focus on describing what can be seen: color, shape, texture, location (leaf, fruit, stem), severity, and other visual clues. Each description should be 1-2 sentences and highlight slightly different aspects or appearances. Avoid simply repeating the disease name in every sentence."
           }
         ]
       }
@@ -90,7 +91,22 @@ def gpt_labs(prompt: str):
     )
     return result.choices[0].message.content
 
+def get_descriptions(disease_name, n=7):
+    prompt = f"""
+You are a professional plant pathologist specializing in strawberries. Please write {n} different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {disease_name} for use in image-to-text retrieval. Focus on describing what can be seen: color, shape, texture, location (leaf, fruit, stem), severity, and other visual clues. Each description should be 1-2 sentences and highlight slightly different aspects or appearances. Avoid simply repeating the disease name in every sentence.
+"""
+    response = client.chat.completions.create(
+        model="openai/gpt-4.1",    # 或"gpt-3.5-turbo"
+        messages=[
+            {"role": "system", "content": "You are an expert plant disease describer."},
+            {"role": "user", "content": prompt}
+        ],
+        temperature=0.7  # 保证多样性
+    )
+    return response['choices'][0].message.conten
+
 
 #作为主程序运行时
 if __name__ == '__main__':
-    print(gpt_labs("Normal strawberry fruit"))
+    print(gpt_labs("Strawberry blight"))
+    # print(get_descriptions("Strawberry blight",7))

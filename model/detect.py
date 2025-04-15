@@ -125,7 +125,8 @@ def class_demo_strawberry_post(path):
                     "Strawberry magnesium deficiency",
                     "Strawberry Leaf Spot disease",
                     "Strawberry with anthracnose disease",
-                    "No related to strawberry"
+                    "Normal starwberry",
+                    "Not related to strawberry"
                         ]
     chinese_text=["草莓灰霉病",
                     "草莓V型褐斑病",
@@ -136,14 +137,15 @@ def class_demo_strawberry_post(path):
                     "草莓缺镁",
                     "草莓蛇眼病",
                     "草莓炭疽病",
-                    "该照片和草莓无关"
+                    "正常草莓",
+                    "与草莓无关"
     ]
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
     model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
 
-    weight_path = 'ViT-B-32-strawberry.pth'
+    weight_path = 'ViT-B-32-few.pth'
     model.load_state_dict(torch.load(weight_path, map_location= device))
 
 
