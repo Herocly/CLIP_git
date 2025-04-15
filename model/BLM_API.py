@@ -5,7 +5,11 @@ import os
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
 
 # ✅ 推荐：用环境变量设置 API Key
-os.environ["OPENAI_API_KEY"] = "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"
+try:
+    with open("./keys/openai_key.opk","r") as file:
+        os.environ['OPENAI_API_KEY'] = file.read()
+except:
+    os.environ['OPENAI_API_KEY'] = ""
 
 # ✅ 使用 OpenRouter 的 base_url
 client = OpenAI(
@@ -85,10 +89,6 @@ def gpt_labs(prompt: str):
     return result.choices[0].message.content
 
 
-<<<<<<< HEAD
-print(gpt_labs("Strawberry with blight disease"))
-=======
 #作为主程序运行时
 if __name__ == '__main__':
     print(gpt_labs("Strawberry with Gray Mould disease'"))
->>>>>>> bf2dbeaca5d1c4f5a5a153022a4f1641d383fc3b
