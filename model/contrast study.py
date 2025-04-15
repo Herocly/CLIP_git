@@ -13,7 +13,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
 model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
-dataset = Strawberry_dataset("dataset/images","dataset/labels/labels.txt",preprocess)
+dataset = Strawberry_dataset("dataset/few_shot/images","dataset/few_shot/few_shot.txt",preprocess)
 dataloader = DataLoader(dataset, batch_size=10, shuffle=True)
 "每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据打乱"
 

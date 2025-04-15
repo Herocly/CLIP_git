@@ -75,7 +75,9 @@ def gpt_labs(prompt: str):
 
             Given the class name '{prompt}', generate 10 unique short descriptions.
             Each description should follow this format:
-            "a photo of '{prompt}', attribute"
+            "a photo of {prompt} attribute"
+            
+            Do not mention some artificial environments of this {prompt}
 
             The [attribute] should describe visual traits like color, shape, condition, or scene (e.g. 'ripe and red', 'covered with white mold', 'on a wooden table').
 
@@ -91,4 +93,4 @@ def gpt_labs(prompt: str):
 
 #作为主程序运行时
 if __name__ == '__main__':
-    print(gpt_labs("Strawberry with Gray Mould disease'"))
+    print(gpt_labs("Normal strawberry fruit"))
