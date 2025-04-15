@@ -85,4 +85,10 @@ def gpt_labs(prompt: str):
     return result.choices[0].message.content
 
 
+<<<<<<< HEAD
 print(gpt_labs("Strawberry with blight disease"))
+=======
+#作为主程序运行时
+if __name__ == '__main__':
+    print(gpt_labs("Strawberry with Gray Mould disease'"))
+>>>>>>> bf2dbeaca5d1c4f5a5a153022a4f1641d383fc3b
