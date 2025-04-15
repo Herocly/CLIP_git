@@ -1,0 +1,168 @@
+cut_img_10103_00000071.jpg	Strawberry with Gray Mould disease
+cut_img_10103_00000043.jpg	Strawberry with Gray Mould disease
+cut_img_10117_00000055.jpg	Strawberry blight
+cut_img_10103_00000176.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000090.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10119_00000058.jpg	Strawberry calcium deficiency
+cut_img_10120_00000042.jpg	Strawberry magnesium deficiency
+cut_img_10119_00000022.jpg	Strawberry calcium deficiency
+cut_img_10103_00000145.jpg	Strawberry with Gray Mould disease
+cut_img_10115_00000076.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10116_00000136.jpg	Strawberry with fertilizer damage disease
+cut_img_10103_00000122.jpg	Strawberry with Gray Mould disease
+cut_img_10122_00000025.jpg	Strawberry with anthracnose disease
+cut_img_10103_00000048.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000119.jpg	Strawberry Leaf Spot disease
+cut_img_10119_00000023.jpg	Strawberry calcium deficiency
+cut_img_10119_00000125.jpg	Strawberry calcium deficiency
+cut_img_10116_00000025.jpg	Strawberry with fertilizer damage disease
+cut_img_10116_00000036.jpg	Strawberry with fertilizer damage disease
+cut_img_10119_00000117.jpg	Strawberry calcium deficiency
+cut_img_10103_00000237.jpg	Strawberry with Gray Mould disease
+cut_img_10116_00000032.jpg	Strawberry with fertilizer damage disease
+cut_img_10103_00000205.jpg	Strawberry with Gray Mould disease
+cut_img_10119_00000082.jpg	Strawberry calcium deficiency
+cut_img_10119_00000112.jpg	Strawberry calcium deficiency
+cut_img_10118_00000020.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000022.jpg	Strawberry with Gray Mould disease
+cut_img_10103_00000080.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000058.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000050.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000132.jpg	Strawberry Leaf Spot disease
+cut_img_10103_00000088.jpg	Strawberry with Gray Mould disease
+cut_img_10122_00000014.jpg	Strawberry with anthracnose disease
+cut_img_10116_00000130.jpg	Strawberry with fertilizer damage disease
+cut_img_10103_00000142.jpg	Strawberry with Gray Mould disease
+cut_img_10103_00000264.jpg	Strawberry with Gray Mould disease
+cut_img_10122_00000012.jpg	Strawberry with anthracnose disease
+cut_img_10103_00000094.jpg	Strawberry with Gray Mould disease
+cut_img_10115_00000097.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10121_00000042.jpg	Strawberry Leaf Spot disease
+cut_img_10103_00000207.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000078.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10119_00000065.jpg	Strawberry calcium deficiency
+cut_img_10122_00000048.jpg	Strawberry with anthracnose disease
+cut_img_10118_00000052.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000037.jpg	Strawberry Leaf Spot disease
+cut_img_10121_00000052.jpg	Strawberry Leaf Spot disease
+cut_img_10115_00000008.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10122_00000030.jpg	Strawberry with anthracnose disease
+cut_img_10115_00000013.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10103_00000082.jpg	Strawberry with Gray Mould disease
+cut_img_10103_00000085.jpg	Strawberry with Gray Mould disease
+cut_img_10103_00000045.jpg	Strawberry with Gray Mould disease
+cut_img_10119_00000017.jpg	Strawberry calcium deficiency
+cut_img_10103_00000152.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000027.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000088.jpg	Strawberry Leaf Spot disease
+cut_img_10116_00000042.jpg	Strawberry with fertilizer damage disease
+cut_img_10103_00000217.jpg	Strawberry with Gray Mould disease
+cut_img_10120_00000011.jpg	Strawberry magnesium deficiency
+cut_img_10118_00000062.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10119_00000077.jpg	Strawberry calcium deficiency
+cut_img_10122_00000008.jpg	Strawberry with anthracnose disease
+cut_img_10121_00000179.jpg	Strawberry Leaf Spot disease
+cut_img_10117_00000016.jpg	Strawberry blight
+cut_img_10118_00000047.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000170.jpg	Strawberry Leaf Spot disease
+cut_img_10122_00000027.jpg	Strawberry with anthracnose disease
+cut_img_10103_00000112.jpg	Strawberry with Gray Mould disease
+cut_img_10120_00000009.jpg	Strawberry magnesium deficiency
+cut_img_10118_00000015.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000055.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000037.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10122_00000049.jpg	Strawberry with anthracnose disease
+cut_img_10121_00000063.jpg	Strawberry Leaf Spot disease
+cut_img_10121_00000121.jpg	Strawberry Leaf Spot disease
+cut_img_10119_00000080.jpg	Strawberry calcium deficiency
+cut_img_10115_00000043.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10115_00000058.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10121_00000028.jpg	Strawberry Leaf Spot disease
+cut_img_10121_00000111.jpg	Strawberry Leaf Spot disease
+cut_img_10103_00000180.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000204.jpg	Strawberry Leaf Spot disease
+cut_img_10121_00000075.jpg	Strawberry Leaf Spot disease
+cut_img_10120_00000022.jpg	Strawberry magnesium deficiency
+cut_img_10119_00000033.jpg	Strawberry calcium deficiency
+cut_img_10121_00000104.jpg	Strawberry Leaf Spot disease
+cut_img_10121_00000142.jpg	Strawberry Leaf Spot disease
+cut_img_10118_00000013.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10118_00000070.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000019.jpg	Strawberry Leaf Spot disease
+cut_img_10117_00000004.jpg	Strawberry blight
+cut_img_10121_00000029.jpg	Strawberry Leaf Spot disease
+cut_img_10117_00000006.jpg	Strawberry blight
+cut_img_10121_00000048.jpg	Strawberry Leaf Spot disease
+cut_img_10117_00000081.jpg	Strawberry blight
+cut_img_10119_00000067.jpg	Strawberry calcium deficiency
+cut_img_10118_00000054.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10122_00000024.jpg	Strawberry with anthracnose disease
+cut_img_10121_00000017.jpg	Strawberry Leaf Spot disease
+cut_img_10118_00000036.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10116_00000112.jpg	Strawberry with fertilizer damage disease
+cut_img_10116_00000037.jpg	Strawberry with fertilizer damage disease
+cut_img_10119_00000014.jpg	Strawberry calcium deficiency
+cut_img_10118_00000003.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10119_00000055.jpg	Strawberry calcium deficiency
+cut_img_10119_00000075.jpg	Strawberry calcium deficiency
+cut_img_10103_00000039.jpg	Strawberry with Gray Mould disease
+cut_img_10118_00000044.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10119_00000039.jpg	Strawberry calcium deficiency
+cut_img_10118_00000042.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000199.jpg	Strawberry Leaf Spot disease
+cut_img_10116_00000002.jpg	Strawberry with fertilizer damage disease
+cut_img_10121_00000112.jpg	Strawberry Leaf Spot disease
+cut_img_10118_00000005.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000226.jpg	Strawberry with Gray Mould disease
+cut_img_10116_00000035.jpg	Strawberry with fertilizer damage disease
+cut_img_10115_00000081.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10121_00000096.jpg	Strawberry Leaf Spot disease
+cut_img_10115_00000041.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10116_00000062.jpg	Strawberry with fertilizer damage disease
+cut_img_10122_00000013.jpg	Strawberry with anthracnose disease
+cut_img_10121_00000162.jpg	Strawberry Leaf Spot disease
+cut_img_10119_00000053.jpg	Strawberry calcium deficiency
+cut_img_10120_00000063.jpg	Strawberry magnesium deficiency
+cut_img_10121_00000128.jpg	Strawberry Leaf Spot disease
+cut_img_10118_00000018.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000113.jpg	Strawberry with Gray Mould disease
+cut_img_10120_00000005.jpg	Strawberry magnesium deficiency
+cut_img_10121_00000158.jpg	Strawberry Leaf Spot disease
+cut_img_10103_00000036.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000127.jpg	Strawberry Leaf Spot disease
+cut_img_10122_00000028.jpg	Strawberry with anthracnose disease
+cut_img_10118_00000021.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10121_00000141.jpg	Strawberry Leaf Spot disease
+cut_img_10119_00000066.jpg	Strawberry calcium deficiency
+cut_img_10120_00000050.jpg	Strawberry magnesium deficiency
+cut_img_10103_00000054.jpg	Strawberry with Gray Mould disease
+cut_img_10117_00000007.jpg	Strawberry blight
+cut_img_10122_00000035.jpg	Strawberry with anthracnose disease
+cut_img_10103_00000225.jpg	Strawberry with Gray Mould disease
+cut_img_10117_00000013.jpg	Strawberry blight
+cut_img_10119_00000045.jpg	Strawberry calcium deficiency
+cut_img_10103_00000099.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000072.jpg	Strawberry Leaf Spot disease
+cut_img_10122_00000003.jpg	Strawberry with anthracnose disease
+cut_img_10118_00000035.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000185.jpg	Strawberry with Gray Mould disease
+cut_img_10119_00000110.jpg	Strawberry calcium deficiency
+cut_img_10119_00000032.jpg	Strawberry calcium deficiency
+cut_img_10122_00000032.jpg	Strawberry with anthracnose disease
+cut_img_10115_00000087.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10119_00000004.jpg	Strawberry calcium deficiency
+cut_img_10118_00000076.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10116_00000103.jpg	Strawberry with fertilizer damage disease
+cut_img_10103_00000133.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000129.jpg	Strawberry Leaf Spot disease
+cut_img_10103_00000028.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000131.jpg	Strawberry Leaf Spot disease
+cut_img_10115_00000114.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10116_00000031.jpg	Strawberry with fertilizer damage disease
+cut_img_10115_00000056.jpg	Strawberry V-shaped brown leaf spot
+cut_img_10118_00000033.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10103_00000111.jpg	Strawberry with Gray Mould disease
+cut_img_10121_00000053.jpg	Strawberry Leaf Spot disease
+cut_img_10118_00000040.jpg	Strawberry leaf spot caused by Ramularia grevilleana
+cut_img_10116_00000071.jpg	Strawberry with fertilizer damage disease
+cut_img_10121_00000068.jpg	Strawberry Leaf Spot disease

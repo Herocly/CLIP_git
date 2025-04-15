@@ -3,6 +3,7 @@ from clip import clip
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 from tqdm import tqdm
+from PIL import Image
 
 from dataset import Strawberry_dataset
 "我自己定义的数据集"
@@ -21,7 +22,9 @@ loss_txt = torch.nn.CrossEntropyLoss()
 "loss(x, class) = -log(exp(x[class]) / sum(exp(x[i])))"
 "非常标准的交叉熵损失函数，用于对比学习"
 optimizer = torch.optim.Adam(model.parameters(), lr=1e-5)
-"设置一个优化器，gpt叫我写的，我也不知道有什么用"
+"设置一个优化器，gpt叫我写的，我也不知道有什么用2025/04/11"
+"现在我知道有什么用了，这是一个类型为adam的优化器，而右边的是学习率"
+"学习率会影响loss函数最终的计算 2025/04/15"
 
 for epoch in range(0,15):
     for image,text in tqdm(dataloader):
