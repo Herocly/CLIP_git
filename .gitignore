@@ -10,10 +10,10 @@ keys/
 thumbs.db
 .DS_Store
 .idea
-!/webpage/strawberry-detector/*/*.jpeg      #不忽略前端的图片文件
-!/webpage/strawberry-detector/*/*.jpg
-!/webpage/strawberry-detector/*/*.png
-!/webpage/strawberry-detector/*/*.webp
+!/webpage/strawberry-detector/**/*.jpeg      #不忽略前端的图片文件
+!/webpage/strawberry-detector/**/*.jpg
+!/webpage/strawberry-detector/**/*.png
+!/webpage/strawberry-detector/**/*.webp
 *.pt
 *.pth
 *.jpg

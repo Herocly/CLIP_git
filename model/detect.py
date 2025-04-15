@@ -127,7 +127,7 @@ def class_demo_strawberry_post(path):
                     "Strawberry with anthracnose disease",
                     "No related to strawberry"
                         ]
-    chinese_text=["灰霉病草莓",
+    chinese_text=["草莓灰霉病",
                     "草莓V型褐斑病",
                     "草莓肥害",
                     "草莓枯萎病",

@@ -7,7 +7,7 @@ os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
 # ✅ 推荐：用环境变量设置 API Key
 try:
     with open("./keys/openai_key.opk","r") as file:
-        os.environ['OPENAI_API_KEY'] = file.read()
+        os.environ['OPENAI_API_KEY'] = file.readline()
 except:
     os.environ['OPENAI_API_KEY'] = ""
 
