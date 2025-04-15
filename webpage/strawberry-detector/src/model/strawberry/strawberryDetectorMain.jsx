@@ -118,8 +118,11 @@ function StrawberryDetectorMain() {
 
     return (
         <div className='strawberryDetector'>
-            <h1>🍓 草莓病害识别系统</h1>
+            <div className='titleContainer'>
+                <h1 className="inPageTitle">草莓病害识别系统</h1>
+            </div>
 
+            <hr className='divideLineUnderTitle'/>
 
             <div className='imageUploadAndButtonDiv'>
 
@@ -163,28 +166,36 @@ function StrawberryDetectorMain() {
             </div>
 
             <div className='resultDiv'>
-                <div className={`uploadStateText ${(state!=0)?'--visible':'--hidden'/*状态信息*/}`}
-                    style={{marginTop:'10px', fontSize:'20px'}}>{state_text}</div>
+                <div className='resultPredict'>
+                    <div className='resultPredictText' style={{display:'flex', flexDirection:'column'}}>
+                        <div className={`uploadStateText ${(state!=0)?'--visible':'--hidden'/*状态信息*/}`}
+                            style={{marginTop:'10px', fontSize:'20px'}}>{state_text}</div>
                 
-                <div className={`detectResultType ${(state==1 && !loading)?'--visible':'--hidden'/*识别的结果*/}`} 
-                    style={{marginTop:'10px', fontSize:'20px'}}>
-                    识别结果：{detect_result_type}
+                        <div className={`detectResultType ${(state==1 && !loading)?'--visible':'--hidden'/*识别的结果*/}`} 
+                            style={{marginTop:'10px', fontSize:'20px'}}>
+                            识别结果：{detect_result_type}
+                        </div>
+
+                        <div className={`detectProb ${(state==1 && !loading)?'--visible':'--hidden'/*最高的置信度*/}`}
+                            style={{marginTop:'10px', fontSize:'20px'}}>
+                            置信度：{detect_result_prob}%
+                        </div>
+                    </div>
+
+                    <div className='resultPredictImg'>
+                        <img src="" alt="" />
+                    </div>
                 </div>
 
-                <div className={`detectProb ${(state==1 && !loading)?'--visible':'--hidden'/*最高的置信度*/}`}
-                    style={{marginTop:'10px', fontSize:'20px'}}>
-                    置信度：{detect_result_prob}%
-                </div>
-                
                 <div className={`allDetectProb ${(state==1 && !loading)?'--visible':'--hidden'/*所有可能性高于0.005%的结果*/}`} 
-                    style={{marginTop:'10px', fontSize:'20px'}}>
+                    style={{marginTop:'50px', fontSize:'20px'}}>
                         所有可能结果：
                         <table>{/*使用表格格式化地展示所有可能结果*/detect_result_other.map((type) => (
                             <tr key={type.index} 
                                 style={{transition: 'opacity .5s ease-in-out',
                                         transitionDelay: `${type.index * 50 + 500/*逐条显示结果*/}ms`}}
                                 className={`${(state==1 && !loading)?'--visible':'--hidden'}`}>
-                                <td style={{width:'350px', float:'left', textAlign:'right'}}>{type.text}:</td>
+                                <td style={{width:'250px', float:'left', textAlign:'right'}}>{type.text}:</td>
                                 <td style={{marginLeft:'15px', float:'left', minWidth:'70px' ,textAlign:'right'}}>{type.prob}%</td>
                                 <td style={{paddingLeft:'15px', float:'left', width:'150px', height:"fit-content"}}>
                                     <ProgressBarProb percent={type.prob}/>

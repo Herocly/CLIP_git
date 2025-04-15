@@ -124,7 +124,7 @@ def class_demo_strawberry_post(path):
                     "Strawberry calcium deficiency",
                     "Strawberry magnesium deficiency",
                     "Strawberry Leaf Spot disease",
-                    "Strawberry with anthracnose disease"
+                    "Strawberry with anthracnose disease",
                     "No related to strawberry"
                         ]
     chinese_text=["灰霉病草莓",
@@ -135,7 +135,7 @@ def class_demo_strawberry_post(path):
                     "草莓缺钙",
                     "草莓缺镁",
                     "草莓蛇眼病",
-                    "草莓炭疽病"
+                    "草莓炭疽病",
                     "该照片和草莓无关"
     ]
     # 测试分类的dem
