@@ -15,7 +15,7 @@ model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
 dataset = Strawberry_dataset("dataset/few_shot/images","dataset/few_shot/few_shot.txt",preprocess)
 dataloader = DataLoader(dataset, batch_size=10, shuffle=True)
-"每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据打乱"
+"每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据进行打乱"
 
 loss_img = torch.nn.CrossEntropyLoss()
 loss_txt = torch.nn.CrossEntropyLoss()
