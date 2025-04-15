@@ -1,11 +1,15 @@
 from openai import OpenAI
 import os
 
+# 设置代理（你已经设置好了）
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
 
+# ✅ 推荐：用环境变量设置 API Key
+os.environ["OPENAI_API_KEY"] = "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"
+
+# ✅ 使用 OpenRouter 的 base_url
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+    base_url="https://openrouter.ai/api/v1"
 )
 
 completion = client.chat.completions.create(
@@ -67,7 +71,7 @@ def gpt_labs(prompt: str):
 
             Given the class name '{prompt}', generate 10 unique short descriptions.
             Each description should follow this format:
-            a photo of '{prompt}', attribute
+            "a photo of '{prompt}', attribute"
 
             The [attribute] should describe visual traits like color, shape, condition, or scene (e.g. 'ripe and red', 'covered with white mold', 'on a wooden table').
 
@@ -81,6 +85,10 @@ def gpt_labs(prompt: str):
     return result.choices[0].message.content
 
 
+<<<<<<< HEAD
+print(gpt_labs("Strawberry with blight disease"))
+=======
 #作为主程序运行时
 if __name__ == '__main__':
     print(gpt_labs("Strawberry with Gray Mould disease'"))
+>>>>>>> bf2dbeaca5d1c4f5a5a153022a4f1641d383fc3b
