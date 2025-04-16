@@ -18,8 +18,8 @@ def test_contrast():
     #加载自己的参数
 
 
-    test_dataset = Strawberry_dataset("dataset/images", "dataset/tests/labels/test.txt", preprocess)
-    dataloader = DataLoader(test_dataset, batch_size=10, shuffle=True)
+    test_dataset = Strawberry_dataset("dataset/few_shot/images", "dataset/few_shot/output.txt", preprocess)
+    dataloader = DataLoader(test_dataset, batch_size=20, shuffle=True)
     "每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据打乱"
 
     # loss_img = torch.nn.CrossEntropyLoss()

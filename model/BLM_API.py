@@ -97,10 +97,12 @@ def gpt_descriptions(disease_name, n=1):
 You are a professional plant pathologist specializing in strawberries. 
 Please write {n} different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {disease_name} for use in image-to-text retrieval. 
 Here are the requirements:
-1.Focus on describing what can be seen: color, shape, texture, location (leaf, fruit, stem), severity, and other visual clues. Each description should be 1-2 sentences and highlight slightly different aspects or appearances.
-2. Avoid simply repeating the disease name in every sentence.
-3.The symptoms are typically seen on the fruit/leaves/stems
-4.Give me the sentence directly,do not add some "1." or else element
+- Focus entirely on **visual characteristics**, such as color, texture, pattern, shape, affected parts of the plant, severity, and other visual clues.
+- Avoid technical or biological explanations that are not visually evident, avoid simply repeating in every sentence.
+- Avoid mentioning the disease name itself in every sentence; instead, describe what is visible.
+- Highlight **slightly different aspects** or **appearances**. 
+- Be concise, objective, and clear.
+- Give me the sentence directly,do not add some "1." or else element
 """
     response = client.chat.completions.create(
         model="openai/gpt-4.1",    # 或"gpt-3.5-turbo"
@@ -183,11 +185,11 @@ Please generate multiple visual descriptions for each disease(or healthy strawbe
 #作为主程序运行时
 if __name__ == '__main__':
     # print(gpt_labs("Strawberry blight"))
-    # print(gpt_descriptions("Strawberry blight"))
+    print(gpt_descriptions("Strawberry blight"))
     # print("none.")
     #with open("./strawberry_disease.json","w") as json_file:
         #json_text = gpt_labs_json("strawberry",60,9,11)
         #print(json_text)
         #json_file.write(json_text)
-    ask_gpt4("translate '草莓V型褐斑病' into english")
+    # ask_gpt4("translate '草莓V型褐斑病' into english")
         

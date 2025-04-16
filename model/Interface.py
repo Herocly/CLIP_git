@@ -74,7 +74,7 @@ def upload():
         #                                "AI",
         #                                "festival"]))
 
-        result = run.zeroshot_strawberry_test(path_tmp)
+        result = run.strawberry_read_with_post(path_tmp)
         print(result)
         return jsonify(result)#将输入传到后端
 

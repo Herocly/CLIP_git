@@ -28,7 +28,7 @@ class Strawberry_dataset(Dataset):
                 #"strip是用来去掉一行的开头结尾空格换行符，而t是文字的标签"
                 #self.image_path.append(os.path.join(self.image_dir,img_name))
                 #self.texts.append(text)
-        with open(label_file, 'r', encoding='utf-8') as f:
+        with open(label_file, 'r', encoding='gbk') as f:
             for line in f:
                 parts = line.strip().split()
                 #print(parts)
