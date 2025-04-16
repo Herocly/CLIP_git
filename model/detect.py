@@ -222,7 +222,10 @@ def zeroshot_strawberry_test(path):
             for disease_name in text_disease_name:
                 temp_list_disease = data_json[disease_name]
                 text_language.extend(temp_list_disease)
-                discribe_list_count.extend(len(temp_list_disease))
+                #print(temp_list_disease)
+                #print(len(temp_list_disease))
+                discribe_list_count.append(len(temp_list_disease))
+                #print(discribe_list_count)
     except:
         return({
             "success":False,
@@ -245,13 +248,13 @@ def zeroshot_strawberry_test(path):
     # 测试分类的dem
     device = "cuda" if torch.cuda.is_available() else "cpu"
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
-    model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
+    model, preprocess = clip.load("./ViT-L-14-336px.pt", device=device)  # 载入模型
 
-    weight_path = 'ViT-B-32-few.pth'
-    model.load_state_dict(torch.load(weight_path, map_location= device))
+    #weight_path = 'ViT-B-32-few.pth'
+    #model.load_state_dict(torch.load(weight_path, map_location= device))
 
 
-    print(f"model = {model}")
+    #print(f"model = {model}")
 
     image = preprocess(Image.open(path)).unsqueeze(0).to(device)
 
@@ -274,38 +277,53 @@ def zeroshot_strawberry_test(path):
             id = idx[i]
             
 
-            prob_disease = []
+            prob_disease = [0 for _ in range(len(text_disease_name))]
             i_disease = 0
             i_sub = 0
             i_max_pos = 0
             for num_prob in discribe_list_count:
                 for j in range(0,num_prob):
-                    prob_disease[i_disease] = probs[i,i_sub]
-                    if i_sub == i:
+                    prob_disease[i_disease] += probs[i,i_sub]
+                    if i_sub == id:
                         i_max_pos = i_disease
+                    #print(f"j:{j}, i_disease:{i_disease}, i_sub:{i_sub}")
+                    #print(i_max_pos, i_sub, i)
                     i_sub += 1
+                #prob_disease[i_disease] /= num_prob
                 i_disease += 1
             
+
+            #sum_prob = 0
+            #for tmp_prob in prob_disease:
+                #sum_prob += tmp_prob
+
+            #for i_prob in range(len(prob_disease)):
+                #prob_disease[i_prob] = prob_disease[i_prob] / sum_prob
+
             temp_list = [(text,prob) for text, prob  in zip(chinese_text,prob_disease)]
+            
                 #将文本与准确度打包生成list列表
             temp_list.sort(key=lambda x: x[1],reverse=True)
                 #按照准确度从高到低排序
 
+            #print(temp_list)
 
             #所有可能的结果总表
             dict_list = [{'index': '{}'.format(index),  #使用enumerate创建一个额外的序号作为主键
                           'text': text,                 #文本：对应的提示词
                           'prob': '{:.2f}'.format(prob*100)}    #准确度：重新格式化为带2位小数的百分比
-                                for index,(text,prob) in enumerate(temp_list) 
-                                    if prob > 0.00005]  #小于0.005%的结果忽略不计
+                                for index,(text,prob) in enumerate(temp_list)
+                                    if prob > 0.00005 and index < 7]  #小于0.005%的结果忽略不计
+            
+            
 
             data =  {
                     "success": True,        #返回识别成功
                     "result": {             
-                        "predict":'{}'.format(chinese_text[i_disease]),        #最高准确度的结果
-                        "prob":'{:.2f}'.format(prob_disease[i_disease]*100),        #对应的准确度
-                        "all": dict_list                                #总表
+                        "predict":'{}'.format(dict_list[0].get('text')),        #最高准确度的结果
+                        "prob":'{}'.format(dict_list[0].get('prob')),        #对应的准确度
+                        "all": dict_list                     #总表
                     }
                 }
-            
+            #print(data)
             return data

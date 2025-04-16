@@ -73,7 +73,10 @@ def upload():
         #                                "disaster",
         #                                "AI",
         #                                "festival"]))
-        return jsonify(run.zeroshot_strawberry_test(path_tmp))#将输入传到后端
+
+        result = run.zeroshot_strawberry_test(path_tmp)
+        print(result)
+        return jsonify(result)#将输入传到后端
 
     except Exception as e:
         return jsonify({
