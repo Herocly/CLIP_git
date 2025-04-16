@@ -5,14 +5,14 @@ import json
 # 设置代理（你已经设置好了）
 os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:7890'
 
-# ✅ 推荐：用环境变量设置 API Key
+# 将API Key存入文件里进行打开
 try:
     with open("./keys/openai_key.opk","r") as file:
         os.environ['OPENAI_API_KEY'] = file.readline()
 except:
     os.environ['OPENAI_API_KEY'] = ""
 
-# ✅ 使用 OpenRouter 的 base_url
+#使用 OpenRouter 的 base_url
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1"
 )
@@ -92,9 +92,15 @@ def gpt_labs(prompt: str):
     )
     return result.choices[0].message.content
 
-def gpt_descriptions(disease_name, n=7):
+def gpt_descriptions(disease_name, n=1):
     prompt = f"""
-You are a professional plant pathologist specializing in strawberries. Please write {n} different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {disease_name} for use in image-to-text retrieval. Focus on describing what can be seen: color, shape, texture, location (leaf, fruit, stem), severity, and other visual clues. Each description should be 1-2 sentences and highlight slightly different aspects or appearances. Avoid simply repeating the disease name in every sentence.
+You are a professional plant pathologist specializing in strawberries. 
+Please write {n} different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {disease_name} for use in image-to-text retrieval. 
+Here are the requirements:
+1.Focus on describing what can be seen: color, shape, texture, location (leaf, fruit, stem), severity, and other visual clues. Each description should be 1-2 sentences and highlight slightly different aspects or appearances.
+2. Avoid simply repeating the disease name in every sentence.
+3.The symptoms are typically seen on the fruit/leaves/stems
+4.Give me the sentence directly,do not add some "1." or else element
 """
     response = client.chat.completions.create(
         model="openai/gpt-4.1",    # 或"gpt-3.5-turbo"
@@ -104,7 +110,7 @@ You are a professional plant pathologist specializing in strawberries. Please wr
         ],
         temperature=0.7  # 保证多样性
     )
-    return response['choices'][0].message.conten
+    return response.choices[0].message.content
 
 
 
@@ -177,10 +183,11 @@ Please generate multiple visual descriptions for each disease(or healthy strawbe
 #作为主程序运行时
 if __name__ == '__main__':
     # print(gpt_labs("Strawberry blight"))
-    # print(gpt_descriptions("Strawberry blight",7))
-    print("none.")
+    # print(gpt_descriptions("Strawberry blight"))
+    # print("none.")
     #with open("./strawberry_disease.json","w") as json_file:
         #json_text = gpt_labs_json("strawberry",60,9,11)
         #print(json_text)
         #json_file.write(json_text)
+    ask_gpt4("translate '草莓V型褐斑病' into english")
         

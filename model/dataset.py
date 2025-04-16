@@ -2,7 +2,8 @@ import torch
 from PIL import Image
 from torch.utils.data import Dataset
 import os
-
+from BLM_API import gpt_descriptions
+import re
 
 
 class Strawberry_dataset(Dataset):
@@ -61,3 +62,44 @@ class Strawberry_dataset(Dataset):
         image = self.preprocess(image)
         text = self.texts[idx]
         return image, text
+
+
+
+classify = {
+        "10103": "Strawberry Gray Mould disease",
+        "10115": "Strawberry V-shaped brown leaf spot disease",
+        "10116": "Strawberry fertilizer damage disease",
+        "10117": "Strawberry blight disease",
+        "10118": "Strawberry leaf spot caused by Ramularia grevilleana disease",
+        "10119": "Strawberry calcium deficiency disease",
+        "10120": "Strawberry magnesium deficiency disease",
+        "10121": "Strawberry Leaf Spot disease",
+        "10122": "Strawberry anthracnose disease",
+        "10123": "Normal strawberry without disease"
+        }
+def get_code(image_name):
+    match = re.search(r'_(\d+)', image_name)
+    #通过re.search函数，找到下划线"_"后跟随的第一段较长的数字，从而把这个数字提取出来
+    #比如cut_img_10122_00000010.jpg 就会提取到10122
+    if match:
+        return match.group(1)
+    else:
+        return None
+
+def get_features(disease:str):
+    return gpt_descriptions(disease)
+
+def create():
+    folder_path = "D:\\cs_self\\1\\clip_git\\CLIP_git\\model\\dataset\\few_shot\\images"
+    output_text = 'output.txt'
+    file_list = os.listdir(folder_path)
+    with open(output_text, 'w') as f:
+        for(image_name) in file_list:
+            disease_name = classify[get_code(image_name)]
+            prompt = get_features(disease_name)
+            print(f"{disease_name} {prompt}")
+            f.write(f"{image_name} {prompt}\n")
+
+if __name__ == '__main__':
+    # print(get_code("cut_img_10122_00000010.jpg"))
+    create()
