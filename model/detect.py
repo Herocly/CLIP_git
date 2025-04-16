@@ -198,3 +198,114 @@ def class_demo_strawberry_post(path):
             #         "success": True,
             #         "result": '{}    {}    others:{}'.format(chinese_text[id],probs[i,id],[v for v in zip(chinese_text,probs[i])])
             #     }
+
+
+def zeroshot_strawberry_test(path):
+
+    text_disease_name=["Healthy strawberry",
+                       "Gray mold (Botrytis cinerea)",
+                       "V-shaped brown leaf spot",
+                       "Fertilizer damage",
+                       "Blight",
+                       "Ramularia leaf spot (caused by Ramularia grevilleana)",
+                       "Calcium deficiency",
+                       "Magnesium deficiency",
+                       "General leaf Spot",
+                       "Anthracnose",
+                       "Powdery mildew",
+                       "Lack of association with strawberries"]
+    text_language=[]
+    discribe_list_count=[]
+    try:
+        with open("./strawberry_disease.json",'r') as file:
+            data_json = json.load(file)
+            for disease_name in text_disease_name:
+                temp_list_disease = data_json[disease_name]
+                text_language.extend(temp_list_disease)
+                discribe_list_count.extend(len(temp_list_disease))
+    except:
+        return({
+            "success":False,
+            "error":"Failed to load detect_list"
+        })
+
+    chinese_text=[  "健康的草莓",
+                    "草莓灰霉病",
+                    "草莓V型褐斑病",
+                    "草莓肥害",
+                    "草莓枯萎病",
+                    "草莓拟盘多毛孢叶斑病",
+                    "草莓缺钙",
+                    "草莓缺镁",
+                    "草莓蛇眼病",
+                    "草莓炭疽病",
+                    "草莓白粉病",
+                    "图片与草莓无关"
+    ]
+    # 测试分类的dem
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
+    model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
+
+    weight_path = 'ViT-B-32-few.pth'
+    model.load_state_dict(torch.load(weight_path, map_location= device))
+
+
+    print(f"model = {model}")
+
+    image = preprocess(Image.open(path)).unsqueeze(0).to(device)
+
+    #text_language = ["a router", "a while box", "a while cat"] #从外部输入
+    text = clip.tokenize(text_language).to(device)
+
+
+
+
+    with torch.no_grad():
+        logits_per_image, logits_per_text = model(image, text)  # 第一个值是图像，第二个是第一个的转置
+        probs = logits_per_image.softmax(dim=-1).cpu().numpy() #此处为计算
+
+        idx = np.argmax(probs, axis=1)
+
+
+
+
+        for i in range(image.shape[0]):#拿到最大值的下标
+            id = idx[i]
+            
+
+            prob_disease = []
+            i_disease = 0
+            i_sub = 0
+            i_max_pos = 0
+            for num_prob in discribe_list_count:
+                for j in range(0,num_prob):
+                    prob_disease[i_disease] = probs[i,i_sub]
+                    if i_sub == i:
+                        i_max_pos = i_disease
+                    i_sub += 1
+                i_disease += 1
+            
+            temp_list = [(text,prob) for text, prob  in zip(chinese_text,prob_disease)]
+                #将文本与准确度打包生成list列表
+            temp_list.sort(key=lambda x: x[1],reverse=True)
+                #按照准确度从高到低排序
+
+
+            #所有可能的结果总表
+            dict_list = [{'index': '{}'.format(index),  #使用enumerate创建一个额外的序号作为主键
+                          'text': text,                 #文本：对应的提示词
+                          'prob': '{:.2f}'.format(prob*100)}    #准确度：重新格式化为带2位小数的百分比
+                                for index,(text,prob) in enumerate(temp_list) 
+                                    if prob > 0.00005]  #小于0.005%的结果忽略不计
+
+            data =  {
+                    "success": True,        #返回识别成功
+                    "result": {             
+                        "predict":'{}'.format(chinese_text[i_disease]),        #最高准确度的结果
+                        "prob":'{:.2f}'.format(prob_disease[i_disease]*100),        #对应的准确度
+                        "all": dict_list                                #总表
+                    }
+                }
+            
+            return data

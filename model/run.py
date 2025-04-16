@@ -26,6 +26,9 @@ def read_with_post(path, arraysignwords):
 def strawberry_read_with_post(path):
     return detect.class_demo_strawberry_post(path)#提示词不从接口传入 改到后端。
 
+def zeroshot_strawberry_test(path):
+    return detect.zeroshot_strawberry_test(path)
+
 def select_image():
     temp_path = filedialog.askopenfilename(
         title = "选择图片文件",
