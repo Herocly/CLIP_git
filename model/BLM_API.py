@@ -96,13 +96,30 @@ def gpt_descriptions(disease_name, n=1):
     prompt = f"""
 You are a professional plant pathologist specializing in strawberries. 
 Please write {n} different, precise, and visually distinctive English descriptions of strawberries showing the symptoms of {disease_name} for use in image-to-text retrieval. 
-Here are the requirements:
-- Focus entirely on **visual characteristics**, such as color, texture, pattern, shape, affected parts of the plant, severity, and other visual clues.
-- Avoid technical or biological explanations that are not visually evident, avoid simply repeating in every sentence.
-- Avoid mentioning the disease name itself in every sentence; instead, describe what is visible.
-- Highlight **slightly different aspects** or **appearances**. 
-- Be concise, objective, and clear.
-- Give me the sentence directly,do not add some "1." or else element
+
+Guidelines:
+1. Each prompt must describe **where** the symptoms appear (e.g. leaf, stem, fruit), **what** they look like (color, shape, size), **texture** (powdery, fuzzy, wet),   and how the disease **progresses** (spreading, sunken, expanding).
+2. Avoid generic or repetitive phrases across diseases. **Use distinct language and highlight unique visual cues** for each disease.
+3. Use different styles, e.g., concise, detailed, comparative, metaphorical (e.g., “appears like moldy flour”).
+4. Whenever possible, add comparative elements that help distinguish it from other similar diseases.
+5. Do **not repeat sentence structure or vocabulary** between diseases.
+6. Give me the sentence directly,do not add some "1." or else element
+7. The text should be not exceed 62 words.
+Most importantly the following:
+Here are all disease:
+        "Strawberry Gray Mould disease",
+        "Strawberry V-shaped brown leaf spot disease",
+        "Strawberry fertilizer damage disease",
+        "Strawberry blight disease",
+        "Strawberry leaf spot caused by Ramularia grevilleana disease",
+        "Strawberry calcium deficiency disease",
+        "Strawberry magnesium deficiency disease",
+        "Strawberry Leaf Spot disease",
+        "Strawberry anthracnose disease",
+        "Normal strawberry without disease"
+        What you are describing is the characteristics of {disease_name}, 
+        So it is important to avoid having repetitive features with other diseases which I tell you.
+
 """
     response = client.chat.completions.create(
         model="openai/gpt-4.1",    # 或"gpt-3.5-turbo"
