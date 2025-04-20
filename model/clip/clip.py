@@ -250,13 +250,21 @@ def tokenize(texts: Union[str, List[str]], context_length: int = 77, truncate: b
     else:
         result = torch.zeros(len(all_tokens), context_length, dtype=torch.int)
 
+    # for i, tokens in enumerate(all_tokens):
+    #     if len(tokens) > context_length:
+    #         if truncate:
+    #             tokens = tokens[:context_length]
+    #             tokens[-1] = eot_token
+    #         else:
+    #             raise RuntimeError(f"Input {texts[i]} is too long for context length {context_length}")
+    #     result[i, :len(tokens)] = torch.tensor(tokens)
+
     for i, tokens in enumerate(all_tokens):
         if len(tokens) > context_length:
-            if truncate:
-                tokens = tokens[:context_length]
-                tokens[-1] = eot_token
-            else:
-                raise RuntimeError(f"Input {texts[i]} is too long for context length {context_length}")
+            # 无论是否设置了 truncate，统一执行截断逻辑
+            tokens = tokens[:context_length]
+            tokens[-1] = eot_token
         result[i, :len(tokens)] = torch.tensor(tokens)
+        #强制截断
 
     return result
