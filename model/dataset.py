@@ -4,6 +4,7 @@ from torch.utils.data import Dataset
 import os
 from BLM_API import gpt_descriptions
 import re
+from tqdm import tqdm
 
 
 class Strawberry_dataset(Dataset):
@@ -91,14 +92,20 @@ def get_features(disease:str):
 
 def create():
     folder_path = "D:\\cs_self\\1\\clip_git\\CLIP_git\\model\\dataset\\few_shot\\images"
+    #后期可以用os换一下相对路径，而不是用我电脑的绝对路径
     output_text = 'output.txt'
     file_list = os.listdir(folder_path)
     with open(output_text, 'w') as f:
-        for(image_name) in file_list:
+        for(image_name) in tqdm(file_list,desc="生成文本ing喵"):
+            #tqdm提供了一个进度条，用来给我提供进度
             disease_name = classify[get_code(image_name)]
-            prompt = get_features(disease_name)
-            print(f"{disease_name} {prompt}")
-            f.write(f"{image_name} {prompt}\n")
+            #通过classify函数获得
+
+            for i in range(2):
+                prompt= get_features((disease_name))
+                print(f"{image_name} {prompt}")
+                f.write(f"{image_name} {prompt}\n")
+            #循环生成文本并写入txt，一个疾病对应三个文本
 
 if __name__ == '__main__':
     # print(get_code("cut_img_10122_00000010.jpg"))
