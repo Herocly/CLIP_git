@@ -14,7 +14,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
 dataset = Strawberry_dataset("dataset/few_shot/images","dataset/few_shot/output.txt",preprocess)
-dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
+dataloader = DataLoader(dataset, batch_size=20, shuffle=True)
 "每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据进行打乱"
 
 loss_img = torch.nn.CrossEntropyLoss()
@@ -27,10 +27,10 @@ optimizer = torch.optim.Adam(model.parameters(), lr=1e-5)
 "学习率会影响loss函数最终的计算 2025/04/15"
 
 for epoch in range(0,15):
-    for image,text in tqdm(dataloader):
+    for image,text in tqdm(dataloader,desc="正在识别中"):
         image = image.to(device)
         "将图像张量移动到指定的设备上"
-        text = clip.tokenize(text).to(device)
+        text = clip.tokenize(text[:45]).to(device)
         "自动截断成77个token"
 
         image_features = []

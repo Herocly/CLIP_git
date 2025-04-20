@@ -20,6 +20,6 @@ def test_consistency(model_name):
         jit_probs = logits_per_image.softmax(dim=-1).cpu().numpy()
 
         logits_per_image, _ = py_model(image, text)
-        py_probs = logits_per_image.softmax(dim=-1).cpu().numpy()
+        py_probs = logits_per_image.softmax(dim=-1).cpu().numpy()   
 
     assert np.allclose(jit_probs, py_probs, atol=0.01, rtol=0.1)
