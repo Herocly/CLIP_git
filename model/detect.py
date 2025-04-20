@@ -145,9 +145,9 @@ def class_demo_strawberry_post(path):
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
     model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
 
-    weight_path = 'ViT-B-32-new.pth'
-    model.load_state_dict(torch.load(weight_path, map_location= device))
-
+    #weight_path = 'ViT-B-32-new.pth'
+    #model.load_state_dict(torch.load(weight_path, map_location= device))
+    #前端测试，暂时不使用模型。
 
     print(f"model = {model}")
 

@@ -192,19 +192,61 @@
 
 
    
+
+.resultPredictUpperBar{
+    clear: both;
+    height: auto;
+    min-height: 220px;
+}
+
+
+.resultPredictText{
+    height: auto;
+    min-height: 220px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.resultPredictImgDiv{
+    float: left;
+    margin-left: 140px;
+}
+
+
+
+
 .uploadStateText{
+    flex: 1;
     transition: opacity .5s;
 }
 
 
 .detectResultType{
+    flex: 1;
     transition: opacity .5s;
     transition-delay: .1s;
 }
 .detectProb{
+    flex: 2;
     transition: opacity .5s;
     transition-delay: .2s;
 }
+
+
+
+.divideLineInsidePredict{
+    border: 0;
+    height: 1px;
+    margin: 0;
+    width:auto;
+    background-color:#434785;
+}
+
+
+
+
+
 .allDetectProb{
     transition: opacity .5s;
     transition-delay: .4s;
@@ -219,4 +261,5 @@
   .--visible {
     opacity: 1;
   }
+
 
