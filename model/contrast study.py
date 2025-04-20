@@ -14,7 +14,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
 dataset = Strawberry_dataset("dataset/few_shot/images","dataset/few_shot/output.txt",preprocess)
-dataloader = DataLoader(dataset, batch_size=20, shuffle=True)
+dataloader = DataLoader(dataset , batch_size=20, shuffle=True)
 "每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据进行打乱"
 
 loss_img = torch.nn.CrossEntropyLoss()
@@ -30,27 +30,31 @@ for epoch in range(0,15):
     for image,text in tqdm(dataloader,desc="正在识别中"):
         image = image.to(device)
         "将图像张量移动到指定的设备上"
-        text = clip.tokenize(text[:45]).to(device)
+        text = clip.tokenize(text[:50]).to(device)
         "自动截断成77个token"
+        "后来我发现并不是严格按照单词去计算token，60个单词也有可能超过77个token"
+        "这里暂且设置成前50个单词"
 
-        image_features = []
-        text_features = []
         image_features = model.encode_image(image)
         text_features = model.encode_text(text)
 
         eps = 1e-8
         image_features = image_features / (image_features.norm(dim=1, keepdim=True) + eps)
         text_features = text_features / (text_features.norm(dim=1, keepdim=True) + eps)
+        # 进行一些简单的归一化
 
         logit_scale = torch.nn.functional.softplus(model.logit_scale).clamp(min=1e-3, max=100)
         print("logit_scale:",logit_scale)
+        # 还是每次都把参数打印出来
+
         logits_per_image = logit_scale * image_features @ text_features.t()
-        logits_per_text = logits_per_image.t()  # 转置即可得到文本与图像的相似度
-        #logits_per_text = logits_per_image.t()  #转置即可得到文本矩阵
+        logits_per_text = logits_per_image.t()  # 转置即可得到文本与图像的矩阵
+        #logits_per_text = logits_per_image.t()  # 转置即可得到文本矩阵
 
         labels = torch.arange(len(image)).to(device)
         print("logits_per_image:",logits_per_image)
         print("logits_per_text:",logits_per_text)
+        # 把每次的矩阵都打印一下，用来检测bug
         loss = ((loss_img(logits_per_image,labels)) + loss_txt(logits_per_text,labels)) / 2
         "loss_img 图像作为查询，文本是目标，loss_txt（文本为查询，图象是目标"
         print(f"loss = {loss}")
