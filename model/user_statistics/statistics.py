@@ -12,8 +12,8 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         self.current_name_count = 0
         self.count = 0
         self.correct = 0
-        self.data = array2D.Array2D([])
-        self.statusData = array2D.Array2D([])
+        self.data = array2D.Array2D()
+        self.statusData = array2D.Array2D()
 
         '''
         statusData中存每个可能的识别结果的统计数据
