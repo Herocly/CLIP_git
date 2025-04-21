@@ -22,7 +22,7 @@ function App() {
 
             </div>
 
-            <div style={{height:'100%', marginTop:'5%'}}>
+            <div style={{height:'100%', marginTop:'0%'}}>
                 <StrawberryDetectorMain/>
             </div>
         </div>

@@ -1,5 +1,6 @@
 
 
+
 .titleContainer{
     text-align: center;
     height: fit-content;
@@ -20,6 +21,7 @@
 .strawberryDetector{
     padding-left: 40px;
     padding-right: 40px;
+    min-width: 1084px;
     font-family: Arial;
     height: 90%;
     border: 2px solid #434785;
@@ -213,7 +215,17 @@
     margin-left: 140px;
 }
 
-
+.resultPredictImg{
+    width:217px;
+    height:217px;
+    padding:2px;
+    object-fit: cover;
+    background-color: #9497cb;
+    border: 1px solid #ccc;
+    box-shadow: -10px 5px 20px 1px #8f93d4;
+    transition: box-shadow .2s;
+    border-radius: 3px;
+}
 
 
 .uploadStateText{
@@ -239,7 +251,8 @@
     border: 0;
     height: 1px;
     margin: 0;
-    width:auto;
+    margin-top: 3px;
+    width: 100% ;
     background-color:#434785;
 }
 

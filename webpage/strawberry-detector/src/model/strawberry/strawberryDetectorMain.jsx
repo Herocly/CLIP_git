@@ -186,8 +186,8 @@ function StrawberryDetectorMain() {
                         <div className='resultPredictImgDiv'>
                             {
                                 (state == 1 && !loading )?
-                                <img className='resultPredictImg' src={`../../../${detect_result_type}.jpg`} alt={`${detect_result_type}`} 
-                                    style={{width:'220px', height:'220px'}}/>
+                                <img className={`resultPredictImg ${(state==1 && !loading)?'--visible':'--hidden'}`} 
+                                    src={`../../../public/strawberry_imgs/${detect_result_type}.jpg`} alt={`${detect_result_type}`} />
                                 :
                                 <div className='resultPredictNoneImg' style={{width:'220px', height:'220px'}}/>
                             }
@@ -198,7 +198,7 @@ function StrawberryDetectorMain() {
                 </div>
 
                 
-                <hr className='divideLineInsidePredict'/>
+                <hr className={`divideLineInsidePredict ${(state==1 && !loading)?'--visible':'--hidden'}`} />
                 
 
                 <div className={`allDetectProb ${(state==1 && !loading)?'--visible':'--hidden'/*所有可能性高于0.005%的结果*/}`} 
