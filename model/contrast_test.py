@@ -71,3 +71,5 @@ def test_contrast():
 
 
 
+if __name__ == '__main__':
+    test_contrast()
