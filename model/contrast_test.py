@@ -13,8 +13,8 @@ def test_contrast():
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
     model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
 
-    #weight_path = 'Few_no_shot.pth'
-    #model.load_state_dict(torch.load(weight_path, map_location= device))
+    # weight_path = 'Few_shot_one_many.pth'
+    # model.load_state_dict(torch.load(weight_path, map_location= device))
     # 加载自己的参数
     model.eval()
 
@@ -29,7 +29,7 @@ def test_contrast():
         "Strawberry magnesium deficiency disease",
         "Strawberry Leaf Spot disease",
         "Strawberry anthracnose disease",
-        "Normal strawberry without disease"
+        # "Normal strawberry without disease"
     ]
     text_token = clip.tokenize(text_language).to(device)
     with torch.no_grad():
@@ -59,7 +59,7 @@ def test_contrast():
             # 对所有类别做归一化，得到概率和为1的分布
             pred_id = np.argmax(probs)
             # 返回最大概率的下标
-            #print(f"GT: {label}    Pred: {text_language[pred_id]}")
+            # print(f"GT: {label}    Pred: {text_language[pred_id]}")
             counter.addPair(label, text_language[pred_id],probs[pred_id])
             if label.strip().lower() == text_language[pred_id].strip().lower():
                 # 避免比较空格之类的瑕疵

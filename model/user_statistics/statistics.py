@@ -73,7 +73,7 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
             self.count+=1
 
 
-            if(expect_val == actual_result):
+            if(expect_val == actual_val):
                 self.statusData.add(expect_val, 2, 1)   #识别正确，TP+1
                 self.correct+=1
             else:
@@ -88,7 +88,7 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         print('Acc:    {:.2f}'.format((self.correct / self.count)*100))
         for name in self.name_dict:
             #print(name)
-            #print(self.statusData)
+            # print(self.statusData)
             try:
                 Pre = self.statusData.get(self.name_dict[name],2) / self.statusData.get(self.name_dict[name],0)
             except:
