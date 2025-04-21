@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib as mp
 import matplotlib.pyplot as plt
 import numpy as np
-import array2D
+from . import array2D
 
 
 class VCounter:   #统计器类 用以统计Acc，Pre等参数
