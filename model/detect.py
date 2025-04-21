@@ -116,16 +116,16 @@ def class_demo_post(path , text_language):
                 }
             
 def class_demo_strawberry_post(path):
-    text_language=['Strawberry with Gray Mould disease,The strawberry fruit is covered by a dense, velvety gray mold, with soft, sunken spots and a mushy texture, often starting at wounds or bruises and spreading quickly, causing the fruit to appear shriveled and decayed.',
-                    "Strawberry V-shaped brown leaf spot,The infected areas on the leaves expand in a V or U shape from the central vein toward the leaf base, with brown lesions that have dark brown edges, and the leaf shows signs of necrosis and wilting.",
-                    "Strawberry with fertilizer damage disease,The leaf edges show small amounts of white fuzz, with black or yellow discoloration, and the leaves appear dull, with dry, brittle edges.",
-                    "Strawberry blight,The strawberry roots turn yellow-brown, shrivel, and decay, while the heart leaves become yellow-green or yellow, curl tightly, shrink and narrow into a boat shape, and lose their glossy appearance.",
-                    "Strawberry leaf spot caused by Ramularia grevilleana,Strawberry leaves develop small, round to irregular brown spots with a pale center, often surrounded by a yellowish halo, and as the disease progresses, the spots expand, leading to leaf tissue decay and premature leaf drop.",
-                    "Strawberry calcium deficiency,Strawberry leaves show signs of curling and cupping, with younger leaves developing angular, necrotic spots along the margins, while older leaves may appear deformed and distorted with a dull, chlorotic yellowing between the veins.",
-                    "Strawberry magnesium deficiency,Strawberry leaves exhibit interveinal chlorosis, where the tissue between veins turns yellow, while the veins remain green, and older leaves show signs of browning or necrosis at the tips and edges, often leading to premature leaf drop.",
-                    "Strawberry Leaf Spot disease,Strawberry leaves show small, round to irregular brown spots with dark borders, often surrounded by a yellowish halo, and as the disease progresses, the spots enlarge, causing the leaf tissue to wither and die, leading to premature leaf drop.",
-                    "Strawberry with anthracnose disease,Strawberry fruit shows sunken, water-soaked lesions that turn dark brown to black, often with concentric rings, while infected leaves develop irregular, dark spots with yellow halos, and the plant may exhibit early wilting and dieback in severe cases.",
-                    "Normal starwberry,Healthy strawberry leaves are deep green, smooth, and uniform in shape, with vibrant, fresh foliage and no discoloration or spots, while the fruit is bright red, firm, and glossy with a well-formed shape and no signs of rot or blemishes.",
+    text_language=['Strawberry with Gray Mould disease',
+                    "Strawberry V-shaped brown leaf spot.",
+                    "Strawberry with fertilizer damage disease,.",
+                    "Strawberry blight.",
+                    "Strawberry leaf spot caused by Ramularia grevilleana.",
+                    "Strawberry calcium deficiency.",
+                    "Strawberry magnesium deficiency.",
+                    "Strawberry Leaf Spot disease.",
+                    "Strawberry with anthracnose disease.",
+                    "Normal starwberry.",
                     "Not related to strawberry"
                         ]
     chinese_text=["草莓灰霉病",

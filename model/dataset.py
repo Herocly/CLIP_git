@@ -105,7 +105,33 @@ def create():
                 print(f"{image_name} {prompt}")
                 f.write(f"{image_name} {prompt}\n")
             # 循环生成文本并写入txt，一个疾病对应三个文本
+diseases = [
+    "Strawberry Gray Mould disease",
+    "Strawberry V-shaped brown leaf spot disease",
+    "Strawberry fertilizer damage disease",
+    "Strawberry blight disease",
+    "Strawberry leaf spot caused by Ramularia grevilleana disease",
+    "Strawberry calcium deficiency disease",
+    "Strawberry magnesium deficiency disease",
+    "Strawberry Leaf Spot disease",
+    "Strawberry anthracnose disease",
+    "Normal strawberry without disease"
+]
+
+disease_text_dict = {}
+
+def create_dict(n:int):
+    for disease in diseases:
+        description = []
+        for i in range(n):
+            description.append(get_features(disease))
+        disease_text_dict[disease] = description
+        return disease_text_dict
+
+
 
 if __name__ == '__main__':
     # print(get_code("cut_img_10122_00000010.jpg"))
-    create()
+    create_dict()
+    print(disease_text_dict)
+
