@@ -43,7 +43,7 @@ class Array2D:
         """获取指定位置的值（如果越界则返回 None）"""
         if row < len(self.data) and col < len(self.data[row]):
             return self.data[row][col]
-        return None
+        return 0
 
     def delete(self, row, col):
         """删除指定位置的元素（设为 0）"""

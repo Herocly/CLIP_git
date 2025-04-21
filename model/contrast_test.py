@@ -59,7 +59,7 @@ def test_contrast():
             # 对所有类别做归一化，得到概率和为1的分布
             pred_id = np.argmax(probs)
             # 返回最大概率的下标
-            print(f"GT: {label}    Pred: {text_language[pred_id]}")
+            #print(f"GT: {label}    Pred: {text_language[pred_id]}")
             counter.addPair(label, text_language[pred_id],probs[pred_id])
             if label.strip().lower() == text_language[pred_id].strip().lower():
                 # 避免比较空格之类的瑕疵
