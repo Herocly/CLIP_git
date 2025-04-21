@@ -4,6 +4,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 
 from dataset import Strawberry_dataset, create_dict  # 我自己定义的数据集
+from Text_Attention import SelfAttentionFuser
 
 class ClipStudy:
     def __init__(self, model_path, device=None, model_name="ViT-B-32"):
@@ -49,6 +50,16 @@ class ClipStudy:
         """
         return disease_features_dict
         # 最后将病的特征词典返回出来
+    def attention_train(self,number):
+        fused_features_dict = {}
+        disease_features_dict = self.create_feature_dict(number)
+        attention_fuser = SelfAttentionFuser(input_dim=768, hidden_dim=512)
+        for disease, feats in disease_features_dict.items():
+            feats_fused, attn_weights = attention_fuser(feats)
+            # 在这里调用self_attention处理特征  feats_fused便为通过自注意力训练之后的向量
+            # attn_weights是权重参数[N N]维度的tensor
+            fused_features_dict[disease] = feats_fused
+
 
 
 
