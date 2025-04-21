@@ -13,8 +13,8 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
 model, preprocess = clip.load("./ViT-B-32.pt",device=device)  # 载入模型
 
-dataset = Strawberry_dataset("dataset/few_shot/images","dataset/few_shot/output.txt",preprocess)
-dataloader = DataLoader(dataset , batch_size=20, shuffle=True)
+dataset = Strawberry_dataset("dataset/images","dataset/train.txt",preprocess)
+dataloader = DataLoader(dataset , batch_size=30, shuffle=True)
 "每次处理10对文本和图像的组合，shuffle表示训练前的同时把数据进行打乱"
 
 loss_img = torch.nn.CrossEntropyLoss()
@@ -69,4 +69,4 @@ for epoch in range(0,15):
         optimizer.step()
         "optimizer使其自动训练，不断更新参数"
 
-torch.save(model.state_dict(), 'ViT-B-32-new.pth')
+torch.save(model.state_dict(), 'Few_no_shot.pth')

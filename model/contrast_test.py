@@ -3,6 +3,7 @@ from clip import clip
 from dataset import Strawberry_dataset
 from torch.utils.data import DataLoader, dataloader
 import numpy as np
+from user_statistics.statistics import VCounter
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -12,7 +13,7 @@ def test_contrast():
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
     model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
 
-    weight_path = 'ViT-B-32-strawberry.pth'
+    weight_path = 'Few_no_shot.pth'
     model.load_state_dict(torch.load(weight_path, map_location= device))
     # 加载自己的参数
     model.eval()
@@ -40,6 +41,7 @@ def test_contrast():
     correction = 0
     count = 0
     with torch.no_grad():
+        counter = VCounter()
         text_features = model.encode_text(text_token)
         text_features = text_features / text_features.norm(dim=-1, keepdim=True)
 
@@ -58,11 +60,13 @@ def test_contrast():
             pred_id = np.argmax(probs)
             # 返回最大概率的下标
             print(f"GT: {label}    Pred: {text_language[pred_id]}")
+            counter.addPair(label, text_language[pred_id],probs[pred_id])
             if label.strip().lower() == text_language[pred_id].strip().lower():
                 # 避免比较空格之类的瑕疵
                 correction += 1
             count += 1
-    print("Total: %d; Correct: %d; Acc: %.2f%%" % (count, correction, correction/count*100))
+    # print("Total: %d; Correct: %d; Acc: %.2f%%" % (count, correction, correction/count*100))
+    counter.print()
     return count, correction
 
 

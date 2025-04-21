@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib as mp
 import matplotlib.pyplot as plt
 import numpy as np
-from array2D import Array2D as Array
+from array2D import Array2D as mArray
 
 
 class VCounter:   #统计器类 用以统计Acc，Pre等参数
@@ -12,8 +12,8 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         self.current_name_count = 0
         self.count = 0
         self.correct = 0
-        self.data = Array([])
-        self.statusData = Array([])
+        self.data = mArray([])
+        self.statusData = mArray([])
 
         '''
         statusData中存每个可能的识别结果的统计数据
@@ -40,7 +40,7 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
             混淆矩阵:           直接使用Data内的数据
         '''
 
-    def __str__():
+    def __str__(self):
         pass
 
     def clear(self):    #清空类内数据
