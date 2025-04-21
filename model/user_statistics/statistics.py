@@ -87,8 +87,22 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
     def print(self):    #打印
         print('Acc:    {:.2f}'.format((self.correct / self.count)*100))
         for name in self.name_dict:
-            Pre = self.statusData.get(self.name_dict[name],2) / self.statusData.get(self.name_dict[name],0)
-            Recall = self.statusData.get(self.name_dict[name],2) / (self.statusData.get(self.name_dict[name],2) + self.statusData.get(self.name_dict[name],4))
-            F1Score = 2 * Pre * Recall / (Pre + Recall)
+            #print(name)
+            #print(self.statusData)
+            try:
+                Pre = self.statusData.get(self.name_dict[name],2) / self.statusData.get(self.name_dict[name],0)
+            except:
+                Pre = -1
+            
+            try:
+                Recall = self.statusData.get(self.name_dict[name],2) / (self.statusData.get(self.name_dict[name],2) + self.statusData.get(self.name_dict[name],4))
+            except:
+                Recall = -1
+            
+            try:
+                F1Score = 2 * Pre * Recall / (Pre + Recall)
+            except:
+                F1Score = -1
+
             print("{}   Pre:{:.2f}%%   Recall:{:.2f}%%    F1:{}%%".format(name, Pre*100, Recall*100, F1Score*100))
         return
