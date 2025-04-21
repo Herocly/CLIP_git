@@ -104,7 +104,7 @@ Guidelines:
 4. Whenever possible, add comparative elements that help distinguish it from other similar diseases.
 5. Do **not repeat sentence structure or vocabulary** between diseases.
 6. Give me the sentence directly,do not add some "1." or else element
-7. The text should be not exceed 62 words.
+7. The conversion of generated text into tokens cannot exceed 70
 Most importantly the following:
 Here are all disease:
         "Strawberry Gray Mould disease",
@@ -122,7 +122,7 @@ Here are all disease:
 
 """
     response = client.chat.completions.create(
-        model="openai/gpt-4.1",    # 或"gpt-3.5-turbo"
+        model="openai/gpt-4.1",
         messages=[
             {"role": "system", "content": "You are an expert plant disease describer."},
             {"role": "user", "content": prompt}
