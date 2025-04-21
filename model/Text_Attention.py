@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from dataset import disease_text_dict,diseases,
+import torch.nn.functional as F
 
 
 class SelfAttentionFuser(nn.Module):
@@ -18,7 +18,7 @@ class SelfAttentionFuser(nn.Module):
         K = self.W_k(descs)  # [N, H]
         V = self.W_v(descs)  # [N, H]
         attn_scores = torch.matmul(Q, K.t()) / Q.shape[-1] ** 0.5  # [N, N]
-        attn_weights = f.softmax(attn_scores, dim=-1)  # [N, N], 行归一化
+        attn_weights = F.softmax(attn_scores, dim=-1)  # [N, N], 行归一化
         out = torch.matmul(attn_weights, V)  # [N, H]
         out = self.output_proj(out)  # [N, D]
 

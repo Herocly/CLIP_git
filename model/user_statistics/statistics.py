@@ -104,5 +104,6 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
             except:
                 F1Score = -1
 
-            print("{}   Pre:{:.2f}%%   Recall:{:.2f}%%    F1:{}%%".format(name, Pre*100, Recall*100, F1Score*100))
+            print("{}   Pre:{:.2f}%%   Recall:{:.2f}%    F1:{:.2f}%".format(name, Pre*100, Recall*100, F1Score*100))
+
         return

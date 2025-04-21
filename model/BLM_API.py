@@ -104,9 +104,11 @@ Guidelines:
 4. Whenever possible, add comparative elements that help distinguish it from other similar diseases.
 5. Do **not repeat sentence structure or vocabulary** between diseases.
 6. Give me the sentence directly,do not add some "1." or else element
-7. The conversion of generated text into tokens cannot exceed 70
+7.Add the name of this disease at the beginning of the sentence
+
 Most importantly the following:
-Here are all disease:
+1.The token of the provided text must be less than 60
+2. Here are all disease:
         "Strawberry Gray Mould disease",
         "Strawberry V-shaped brown leaf spot disease",
         "Strawberry fertilizer damage disease",

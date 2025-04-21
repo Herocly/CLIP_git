@@ -5,7 +5,7 @@ import os
 from BLM_API import gpt_descriptions
 import re
 from tqdm import tqdm
-
+import clip
 
 class Strawberry_dataset(Dataset):
     
@@ -92,7 +92,7 @@ def get_features(disease:str):
 def create():
     folder_path = "D:\\cs_self\\1\\clip_git\\CLIP_git\\model\\dataset\\few_shot\\images"
     # 过段时间用os换一下相对路径，而不是用我电脑的绝对路径
-    output_text = 'output.txt'
+    output_text = 'output_range3.txt'
     file_list = os.listdir(folder_path)
     with open(output_text, 'w') as f:
         for(image_name) in tqdm(file_list,desc="生成文本ing喵"):
@@ -100,7 +100,7 @@ def create():
             disease_name = classify[get_code(image_name)]
             # 通过classify词组获得病名
 
-            for i in range(2):
+            for i in range(3):
                 prompt= get_features((disease_name))
                 print(f"{image_name} {prompt}")
                 f.write(f"{image_name} {prompt}\n")
@@ -126,12 +126,13 @@ def create_dict(n:int):
         for i in range(n):
             description.append(get_features(disease))
         disease_text_dict[disease] = description
-        return disease_text_dict
+    return disease_text_dict
+
 
 
 
 if __name__ == '__main__':
     # print(get_code("cut_img_10122_00000010.jpg"))
-    create_dict()
-    print(disease_text_dict)
-
+    # create_dict()
+    # print(disease_text_dict)
+    create()
