@@ -126,13 +126,27 @@ def create_dict(n:int):
         for i in range(n):
             description.append(get_features(disease))
         disease_text_dict[disease] = description
+        print(disease,":",disease_text_dict[disease])
     return disease_text_dict
 
+def create2():
+    folder_path = "D:\\cs_self\\1\\clip_git\\CLIP_git\\model\\dataset\\few_shot\\images"
+    # 过段时间用os换一下相对路径，而不是用我电脑的绝对路径
+    output_text = 'output_attention1.txt'
+    file_list = os.listdir(folder_path)
+    with open(output_text, 'w') as f:
+        for(image_name) in tqdm(file_list,desc="生成文本ing喵"):
+            # tqdm提供了一个进度条，用来给我提供进度
+            disease_name = classify[get_code(image_name)]
+            # 通过classify词组获得病名
 
+            for i in range(3):
+                print(f"{image_name} {disease_name}")
+                f.write(f"{image_name} {disease_name}\n")
 
 
 if __name__ == '__main__':
     # print(get_code("cut_img_10122_00000010.jpg"))
     # create_dict()
     # print(disease_text_dict)
-    create()
+    create_dict(1)

@@ -104,10 +104,10 @@ Guidelines:
 4. Whenever possible, add comparative elements that help distinguish it from other similar diseases.
 5. Do **not repeat sentence structure or vocabulary** between diseases.
 6. Give me the sentence directly,do not add some "1." or else element
-7.Add the name of this disease at the beginning of the sentence
+7. Add the name of this disease at the beginning of the sentence
 
 Most importantly the following:
-1.The token of the provided text must be less than 60
+1.The token of the provided text must be less than 65
 2. Here are all disease:
         "Strawberry Gray Mould disease",
         "Strawberry V-shaped brown leaf spot disease",
@@ -129,7 +129,7 @@ Most importantly the following:
             {"role": "system", "content": "You are an expert plant disease describer."},
             {"role": "user", "content": prompt}
         ],
-        temperature=0.7  # 保证多样性
+        temperature=1.3  # 保证多样性
     )
     return response.choices[0].message.content
 
