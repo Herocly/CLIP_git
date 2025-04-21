@@ -50,16 +50,80 @@ class ClipStudy:
         """
         return disease_features_dict
         # 最后将病的特征词典返回出来
-    def attention_train(self,number):
+    def create_fused_dict(self,number):
         fused_features_dict = {}
         disease_features_dict = self.create_feature_dict(number)
-        attention_fuser = SelfAttentionFuser(input_dim=768, hidden_dim=512)
+        attention_fuser = SelfAttentionFuser(input_dim=768, hidden_dim=512).to(self.device)
         for disease, feats in disease_features_dict.items():
             feats_fused, attn_weights = attention_fuser(feats)
             # 在这里调用self_attention处理特征  feats_fused便为通过自注意力训练之后的向量
             # attn_weights是权重参数[N N]维度的tensor
             fused_features_dict[disease] = feats_fused
+            # 循环把向量存储到字典中
+        return fused_features_dict
 
+    def attention_clip_train(self,image_folder,label_file,epochs=25,batch_size=30,lr=1e-5, save_path='Attention_Few_shot.pth'):
+        dataset = Strawberry_dataset(image_folder,label_file,self.preprocess)
+        dataloader = DataLoader(dataset,batch_size=batch_size,shuffle=True)
+
+        loss_img = torch.nn.CrossEntropyLoss()
+        loss_txt = torch.nn.CrossEntropyLoss()
+        "loss(x, class) = -log(exp(x[class]) / sum(exp(x[i])))"
+        optimizer = torch.optim.Adam(self.model.parameters(), lr=lr)
+        "此处为复制原来正常训练的代码，注释请见下文的正常训练"
+
+        fused_features_dict = self.create_fused_dict(number=5)
+        "我们给每个病类的词典的feature目前提供5个语句"
+
+        for k in fused_features_dict:
+            fused_features_dict[k] = fused_features_dict[k].to(self.device)
+
+        for epoch in range(epochs):
+            for images, labels in tqdm(dataloader,desc=f"正在训练喵 {epoch+1}/{epochs}"):
+                images = images.to(self.device)
+                labels = labels.to(self.device)
+                "我们这边把labels存储成字符串的名字 labels = ['diseaseA','diseaseB'...]"
+
+                image_features = self.model.encode_image(images)
+                image_features = image_features / image_features.norm(dim=-1, keepdim=True)
+                "这边对图像的处理方法和正常的都是一样，先编码再归一化"
+
+                text_features = []
+                "新建一个空的文本特征"
+                for label in labels:
+                    feat = fused_features_dict[label]
+                    text_features.append(feat.unsqueeze(0))
+                text_features = torch.cat(text_features, dim=0)
+                # torch.cat将存储的所有一维向量把他们叠加到一起，成为一个[batch_size,768]维的向量
+
+                logit_scale = torch.nn.functional.softplus(self.model.logit_scale).clamp(min=1e-3, max=100)
+                print("logit_scale:", logit_scale)
+                # 还是每次都把参数打印出来
+
+                logits_per_image = logit_scale * image_features @ text_features.t()
+                logits_per_text = logits_per_image.t()  # 转置即可得到文本与图像的矩阵
+                # logits_per_text = logits_per_image.t()  # 转置即可得到文本矩阵
+
+                lbl_range = torch.arange(len(images)).to(self.device)
+                print("logits_per_image:", logits_per_image)
+                print("logits_per_text:", logits_per_text)
+                # 把每次的矩阵都打印一下，用来检测bug
+                loss = ((loss_img(logits_per_image, lbl_range)) + loss_txt(logits_per_text, lbl_range)) / 2
+                "loss_img 图像作为查询，文本是目标，loss_txt（文本为查询，图像是目标"
+                print(f"loss = {loss}")
+
+                optimizer.zero_grad()
+                "这时我们会使用zero_grad使计算梯度每次计算后清零"
+                loss.backward()
+                'backward使梯度逐渐积累，不会自动清零'
+                torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
+                "梯度裁剪"
+                optimizer.step()
+                "optimizer使其自动训练，不断更新参数"
+
+
+        torch.save(self.model.state_dict(), save_path)
+        print(f"Model saved to {save_path}")
 
 
 
