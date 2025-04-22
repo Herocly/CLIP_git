@@ -13,8 +13,8 @@ def test_contrast():
     # 模型选择['RN50', 'RN101', 'RN50x4', 'RN50x16', 'ViT-B/32', 'ViT-B/16']，对应不同权重
     model, preprocess = clip.load("./ViT-B-32.pt", device=device)  # 载入模型
 
-    weight_path = 'Attention_Few_shot.pth'
-    model.load_state_dict(torch.load(weight_path, map_location= device))
+    #weight_path = 'Attention_Few_shot.pth'
+    #model.load_state_dict(torch.load(weight_path, map_location= device))
     # 加载自己的参数
     model.eval()
 
@@ -68,6 +68,7 @@ def test_contrast():
     # print("Total: %d; Correct: %d; Acc: %.2f%%" % (count, correction, correction/count*100))
     counter.print()
     print("Pre:True positive所占的比率  Recall:正样本中被识别为正样本的比率  F1取二者平均，做一个参考")
+    counter.saveJson("common_Test")
     return count, correction
 
 

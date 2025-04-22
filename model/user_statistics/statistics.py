@@ -3,7 +3,8 @@ import matplotlib as mp
 import matplotlib.pyplot as plt
 import numpy as np
 from . import array2D
-
+import os
+import json
 
 class VCounter:   #统计器类 用以统计Acc，Pre等参数
 
@@ -14,7 +15,7 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         self.correct = 0
         self.data = array2D.Array2D()
         self.statusData = array2D.Array2D()
-
+        self.Acc = 0
         '''
         statusData中存每个可能的识别结果的统计数据
         按照如下顺序存储
@@ -23,6 +24,10 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         row2 ------ correct     该分类下阳性数(True Positives)
         row3 ------ mistake     该分类下阴性数(False Positives)
         row4 ------ misjudge    其他分类被识别为该分类数量(False Negatives)
+        统计量
+        row5 ------ Precision
+        row6 ------ Recore
+        row7 ------ F1-Score
 
         True Negatives由计算得出，值为
             (count_sum - count) - misjudge
@@ -50,6 +55,7 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         self.correct = 0
         self.data.clear()
         self.statusData.clear()
+        self.Acc = 0
         return
     
     def checkKey(self, key_val:str):
@@ -84,8 +90,10 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
         except "Failed to load typename into VCounter.":
             pass    
 
-    def print(self):    #打印
-        print('Acc:    {:.2f}'.format((self.correct / self.count)*100))
+
+
+    def calc(self):
+        self.Acc = self.correct / self.count
         for name in self.name_dict:
             #print(name)
             # print(self.statusData)
@@ -104,6 +112,82 @@ class VCounter:   #统计器类 用以统计Acc，Pre等参数
             except:
                 F1Score = -1
 
-            print("{}   Pre:{:.2f}%%   Recall:{:.2f}%    F1:{:.2f}%".format(name, Pre*100, Recall*100, F1Score*100))
-
+            self.statusData.set(self.name_dict[name],5,Pre)
+            self.statusData.set(self.name_dict[name],6,Recall)
+            self.statusData.set(self.name_dict[name],7,F1Score)
         return
+
+    def print(self):    #打印
+        self.calc()
+        print('Acc:    {:.2f}'.format(self.Acc*100))
+        for name in self.name_dict:
+            #print(name)
+            # print(self.statusData)
+
+            Pre = self.statusData.get(self.name_dict[name],5)
+            Recall = self.statusData.get(self.name_dict[name],6)
+            F1Score = self.statusData.get(self.name_dict[name],7)
+
+            print("{}   Pre:{:.2f}%   Recall:{:.2f}%    F1:{:.2f}%".format(name, Pre*100, Recall*100, F1Score*100))
+        return
+    
+    def saveJson(self, file_name:str = "New Statistics",file_path: str = "./" ):
+        add_num = 0
+        while(os.path.exists(file_path+file_name+ (f"({add_num})" if add_num != 0 else "" )+ ".json")):
+            str1 = file_path+file_name+ (f"({add_num})" if add_num != 0 else "" )+ ".json"
+            print(f"file \"{str1}\" exists.")
+            add_num += 1
+        
+        str2 = file_path+file_name+ (f"({add_num})" if add_num != 0 else "" )+ ".json"
+        print(f"Creating file \"{str2}\"")
+
+        try:
+            with open(file_path+file_name+ (f"({add_num})" if add_num != 0 else "" )+ ".json", "w") as json_file:
+                self.calc()
+
+
+                statisticsInfo = []
+                details = []
+
+                for name in self.name_dict:
+                    statisticsInfo.append(
+                        {
+                            "name" : name,
+                            "Precision" : self.statusData.get(self.name_dict[name], 5) ,
+                            "Recall"    : self.statusData.get(self.name_dict[name], 6) ,
+                            "F1-Score"  : self.statusData.get(self.name_dict[name], 7) 
+                        }
+                    )
+
+                for name in self.name_dict:
+                    details.append(
+                        {
+                            "name" : name,
+                            "Count" : self.statusData.get(self.name_dict[name], 0) ,
+                            "SumProb"    : self.statusData.get(self.name_dict[name], 1) ,
+                            "True Positive"  : self.statusData.get(self.name_dict[name], 2) ,
+                            "False Positive"    : self.statusData.get(self.name_dict[name], 3),
+                            "False Negative"    : self.statusData.get(self.name_dict[name], 4) 
+                        }
+                    )
+
+                data_all = []
+                for i in range(len(self.name_dict)):
+                    data_raw = []
+                    for j in range(len(self.name_dict)):
+                        data_raw.append(self.data.get(i,j))
+                    data_all.append(data_raw)
+
+                data = {
+                    "Accuracy"  : self.Acc,
+                    "ItemScore" : statisticsInfo,
+                    "Details"   : details,
+                    "Data"      : data_all
+                }
+
+                json.dump(data, json_file, indent = 4)
+
+                json_file.close()
+
+        except:
+            print("Failed to created File.")
