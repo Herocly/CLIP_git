@@ -1,0 +1,103 @@
+
+
+
+.titleContainer{
+    text-align: center;
+    height: fit-content;
+}
+
+.inPageTitle{
+    height: 30px;
+    color: #de2c62;
+    
+}
+
+.divideLineUnderTitle{
+    border: 0;
+    height: 1px;
+    background-color:#434785;
+}
+
+.strawberryDetectorEnter{
+    padding-left: 40px;
+    padding-right: 40px;
+    min-width: 1084px;
+    font-family: Arial;
+    height: 90%;
+    border: 2px solid #434785;
+    border-radius: 15px;
+}
+
+
+.EnterButtonArea{
+    width: 100%;
+    min-height: 300px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.EnterButton {
+    flex: 1;
+    flex-flow: row;
+    --glow-color: rgb(164, 169, 231);
+    --glow-spread-color: rgba(195, 187, 255, 0.781);
+    --enhanced-glow-color: rgb(243, 241, 255);
+    --btn-color: rgb(162, 160, 234);
+    width: 75%;
+    height: 15%;
+    border: .11em solid rgb(204, 209, 251);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-left: 5em; 
+    margin-right: 5em;
+    margin-top: 1.5em;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: .35em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 9em .25em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position:static;
+    transition: all 0.3s;
+   }
+   
+
+   
+   .EnterButton:hover {
+        flex: 1;
+        color: rgb(190, 200, 255);
+        background-color: rgb(150, 148, 239);
+        box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 9em 0 var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+
+   
+   
+   .EnterButton:active {
+        flex: 1;
+        box-shadow: 0 0 0.6em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+
+
+   .--hidden {
+    transition: opacity .5s;
+    opacity: 0;
+  }
+   
+  .--visible {
+    opacity: 1;
+  }
+
+

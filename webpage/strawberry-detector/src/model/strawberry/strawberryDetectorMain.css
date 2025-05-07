@@ -23,7 +23,7 @@
     padding-right: 40px;
     min-width: 1084px;
     font-family: Arial;
-    height: 90%;
+    height: 100%;
     border: 2px solid #434785;
     border-radius: 15px;
 }
@@ -102,7 +102,7 @@
 .noneImgShow:hover{
     flex: 1;
     margin: 15px;
-    padding: 5px;
+    padding: 3px;
     min-width: 300px;
     height: 300px;
     object-fit: cover;
