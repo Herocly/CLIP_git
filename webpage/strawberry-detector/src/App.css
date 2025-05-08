@@ -8,7 +8,7 @@
 
 .inPageTitle{
     height: 30px;
-    color: #de2c62;
+    color: #000000;
     
 }
 
@@ -24,8 +24,9 @@
     min-width: 1084px;
     font-family: Arial;
     height: 90%;
-    border: 2px solid #434785;
+    border: 2px solid #000000;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 
@@ -44,28 +45,24 @@
 .EnterButton {
     flex: 1;
     flex-flow: row;
-    --glow-color: rgb(164, 169, 231);
-    --glow-spread-color: rgba(195, 187, 255, 0.781);
-    --enhanced-glow-color: rgb(243, 241, 255);
-    --btn-color: rgb(162, 160, 234);
+    --glow-color: #aec7dc;
+    --glow-spread-color: #aec7dc;
+    --enhanced-glow-color: #aec7dc;
+    --btn-color: #aec7dc;
     width: 75%;
     height: 15%;
-    border: .11em solid rgb(204, 209, 251);
+    border: .11em solid #aec7dc; 
     padding-top: 2em;
     padding-bottom: 2em;
     margin-left: 5em; 
     margin-right: 5em;
     margin-top: 1.5em;
-    color: #ffffff;
+    color: #393939;
     font-size: 50px;
     font-weight: bold;
     background-color: var(--btn-color);
-    border-radius: .35em;
+    /* border-radius: .35em; */
     outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 9em .25em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .5em var(--glow-color);
     position:static;
     transition: all 0.3s;
    }
@@ -74,8 +71,8 @@
    
    .EnterButton:hover {
         flex: 1;
-        color: rgb(190, 200, 255);
-        background-color: rgb(150, 148, 239);
+        color: rgb(103, 103, 103);
+        background-color: rgb(165, 192, 212);
         box-shadow: 0 0 1em .25em var(--glow-color),
            0 0 9em 0 var(--glow-spread-color),
            inset 0 0 .75em .25em var(--glow-color);

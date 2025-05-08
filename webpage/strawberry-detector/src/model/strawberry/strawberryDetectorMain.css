@@ -8,7 +8,7 @@
 
 .inPageTitle{
     height: 30px;
-    color: #de2c62;
+    color: #000000;
     
 }
 
@@ -18,6 +18,20 @@
     background-color:#434785;
 }
 
+
+
+.allContentDiv{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 .strawberryDetector{
     padding-left: 40px;
     padding-right: 40px;
@@ -26,6 +40,7 @@
     height: 100%;
     border: 2px solid #434785;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .imageUploadAndButtonDiv{
@@ -35,14 +50,13 @@
 }
 
 .resultDiv{
-    color:#515694;
+    color:#000000;
     font-weight: 600;
     float: left;
     width: 60%;
     height:400px;
     margin-left: 50px;
     margin-top: 20px;
-    font-size: 20p;
 }
 
 
@@ -60,8 +74,8 @@
     height: 300px;
     object-fit: cover;
     border: 1px solid #ccc;
-    box-shadow: -10px 5px 20px 1px #797ec1;
-    background-color: #9497cb;
+    box-shadow: -10px 5px 20px 1px #8ca2b4;
+    background-color: #aec7db;
     transition: box-shadow .2s;
 
     border-radius: 3px;
@@ -76,7 +90,7 @@
     height: 300px;
     object-fit: cover;
     border: 1px solid #ccc;
-    box-shadow: -10px 5px 20px 1px #8f93d4;
+    box-shadow: -10px 5px 20px 1px #7c91a3;
     transition: box-shadow .2s;
     border-radius: 3px;
 }
@@ -90,8 +104,8 @@
     min-width: 300px;
     height: 300px;
     object-fit: cover;
-    border: 1px solid #8888ff;
-    box-shadow: -10px 5px 20px 1px #797ec1;
+    border: 1px solid #8ca2b4;
+    box-shadow: -10px 5px 20px 1px #8ca2b4;
     transition: box-shadow .2s;
     justify-content: center;
     align-items: center;
@@ -106,8 +120,8 @@
     min-width: 300px;
     height: 300px;
     object-fit: cover;
-    border: 1px solid #8888ff;
-    box-shadow: -10px 5px 20px 1px #8f93d4;
+    border: 1px solid #8ca2b4;
+    box-shadow: -10px 5px 20px 1px #7c91a3;
     transition: box-shadow .2s;
     justify-content: center;
     align-items: center;
@@ -117,7 +131,7 @@
 
 .noneImgShowText{
     
-    color: rgb(102, 102, 156);
+    color: #000000;
     margin-top: 40%;
     text-align: center;
     font-size: 30px;
@@ -137,15 +151,15 @@
 
 .buttonAreaButton {
     flex: 1;
-    --glow-color: rgb(132, 139, 239);
-    --glow-spread-color: rgba(138, 123, 255, 0.781);
-    --enhanced-glow-color: rgb(210, 206, 255);
-    --btn-color: rgb(131, 127, 244);
+    --glow-color: #8ca2b4;
+    --glow-spread-color: #8ca2b4;
+    --enhanced-glow-color: #8ca2b4;
+    --btn-color: #8ca2b4;
     width: 120px;
     height: 30%;
-    border: .21em solid rgb(156,165,250);
+    border: .21em solid rgb(81, 81, 81);
     padding: 1em 3em;
-    color: #ffffff;
+    color: #212121;
     font-size: 15px;
     font-weight: bold;
     background-color: var(--btn-color);
@@ -158,26 +172,12 @@
     position: relative;
     transition: all 0.3s;
    }
-   
-   .buttonAreaButton::after {
-        flex: 1;
-        pointer-events: none;
-        content: "";
-        position: absolute;
-        top: 120%;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--glow-spread-color);
-        filter: blur(2em);
-        opacity: .7;
-        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
-   }
+
    
    .buttonAreaButton:hover {
         flex: 1;
-        color: rgb(190, 200, 255);
-        background-color: rgb(150, 148, 239);
+        color: rgb(0, 0, 0);
+        background-color: #7c91a3;
         box-shadow: 0 0 1em .25em var(--glow-color),
            0 0 9em 0 var(--glow-spread-color),
            inset 0 0 .75em .25em var(--glow-color);
@@ -208,6 +208,7 @@
     float: left;
     display: flex;
     flex-direction: column;
+    font-size: 20px;
 }
 
 .resultPredictImgDiv{
@@ -220,9 +221,9 @@
     height:217px;
     padding:2px;
     object-fit: cover;
-    background-color: #9497cb;
+    background-color: #7c91a3;
     border: 1px solid #ccc;
-    box-shadow: -10px 5px 20px 1px #8f93d4;
+    box-shadow: -10px 5px 20px 1px #7c91a3;
     transition: box-shadow .2s;
     border-radius: 3px;
 }

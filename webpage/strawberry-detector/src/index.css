@@ -6,13 +6,14 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
+  color: #000;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background-image:linear-gradient(180deg,#96a7ff,#d9dbff 10%, #d9dbff 80%,#96a7ff);
+  /*background-image: linear-gradient(180deg,#96a7ff,#d9dbff 10%, #d9dbff 80%,#96a7ff)*/
+  background-color: #aec7dc;
   /*background-image:linear-gradient(70deg,#889cfc,#696db3);*/
 }
 
@@ -22,11 +23,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: #000000;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: #000000;
 }
 
 html,body {
@@ -65,7 +66,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: #000000;
     background-color: #ffffff;
   }
   a:hover {

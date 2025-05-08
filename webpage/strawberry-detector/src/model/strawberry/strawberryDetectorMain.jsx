@@ -124,6 +124,8 @@ function StrawberryDetectorMain() {
 
             <hr className='divideLineUnderTitle'/>
 
+
+        <div className='allContentDiv'>
             <div className='imageUploadAndButtonDiv'>
 
                 <label>{/*使用label隐藏图片上传input框，用点击图片区域代替*/}
@@ -170,20 +172,20 @@ function StrawberryDetectorMain() {
                     <div className='resultPredict'>
                         <div className='resultPredictText' style={{display:'flex', flexDirection:'column'}}>
                             <div className={`uploadStateText ${(state!=0)?'--visible':'--hidden'/*状态信息*/}`}
-                                style={{marginTop:'10px', fontSize:'20px'}}>{state_text}</div>
+                                style={{marginTop:'10px', fontSize:'25px'}}>{state_text}</div>
                 
                             <div className={`detectResultType ${(state==1 && !loading)?'--visible':'--hidden'/*识别的结果*/}`} 
-                                style={{marginTop:'10px', fontSize:'20px'}}>
+                                style={{marginTop:'10px', fontSize:'25px'}}>
                                 识别结果：{detect_result_type}
                             </div>
 
                             <div className={`detectProb ${(state==1 && !loading)?'--visible':'--hidden'/*最高的置信度*/}`}
-                                style={{marginTop:'10px', fontSize:'20px'}}>
+                                style={{marginTop:'10px', fontSize:'25px'}}>
                                 置信度：{detect_result_prob}%
                             </div>
                         </div>
 
-                        <div className='resultPredictImgDiv'>
+                        {/* <div className='resultPredictImgDiv'>
                             {
                                 (state == 1 && !loading )?
                                 <img className={`resultPredictImg ${(state==1 && !loading)?'--visible':'--hidden'}`} 
@@ -191,7 +193,7 @@ function StrawberryDetectorMain() {
                                 :
                                 <div className='resultPredictNoneImg' style={{width:'220px', height:'220px'}}/>
                             }
-                        </div>
+                        </div> */}
                     </div>
 
                     
@@ -223,6 +225,10 @@ function StrawberryDetectorMain() {
                 
 
             </div>
+
+
+        </div>
+
         </div>
     );
 }
