@@ -40,7 +40,7 @@ function App() {
                             <button onClick={handleEnterProgram} 
                                 className={'EnterButton'}
                                 >
-                                {'开始识别'}
+                                {'进入系统'}
                             </button>
                         </div>
                     </div>
